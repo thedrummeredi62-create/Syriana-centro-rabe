@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    font-family: 'Cinzel', serif;
-    background-color: #0a0a0a;
+    font-family: 'Marcellus', serif;
+    background-color: #0b0b0b;
     color: white;
     scroll-behavior: smooth;
 }
@@ -9,34 +9,36 @@ body {
 nav {
     position: fixed;
     width: 100%;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(20,0,0,0.95);
     display: flex;
     justify-content: space-between;
-    padding: 15px 40px;
+    padding: 20px 50px;
     z-index: 1000;
 }
 
 .logo {
     color: gold;
-    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
     letter-spacing: 3px;
 }
 
 .menu a {
     color: white;
-    margin-left: 20px;
+    margin-left: 25px;
     text-decoration: none;
 }
 
 .btn-nav {
-    background-color: #8B0000;
+    background-color: #5c0000;
     padding: 8px 15px;
     border: 1px solid gold;
+    color: gold;
 }
 
 header {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
     url('https://images.unsplash.com/photo-1604908176997-4312f7e08a9d');
     background-size: cover;
     background-position: center;
@@ -47,24 +49,31 @@ header {
 }
 
 .hero-content h1 {
-    font-size: 60px;
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
     color: gold;
+}
+
+.hero-content h2 {
+    font-size: 40px;
+    color: #8B0000;
 }
 
 .btn-principal {
-    padding: 15px 30px;
-    background-color: #8B0000;
+    padding: 15px 35px;
+    background-color: #5c0000;
     color: gold;
-    text-decoration: none;
     border: 2px solid gold;
+    text-decoration: none;
 }
 
-.destaques {
+.section {
     padding: 100px 20px;
     text-align: center;
 }
 
-.destaques h2 {
+.titulo {
+    font-family: 'Playfair Display', serif;
     color: gold;
     margin-bottom: 50px;
 }
@@ -77,11 +86,11 @@ header {
 }
 
 .card {
-    background-color: #111;
-    width: 280px;
+    background-color: #120000;
+    width: 300px;
     border: 1px solid gold;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: 0.3s;
 }
 
 .card:hover {
@@ -90,7 +99,7 @@ header {
 
 .card img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -99,11 +108,10 @@ header {
 }
 
 .card button {
-    background-color: #8B0000;
+    background-color: #5c0000;
     color: gold;
-    border: none;
+    border: 1px solid gold;
     padding: 10px 20px;
-    cursor: pointer;
 }
 
 .info {
@@ -112,18 +120,28 @@ header {
     transition: max-height 0.4s ease;
     padding: 0 15px;
     font-size: 14px;
-    color: #ccc;
+    color: #ddd;
 }
 
-.localizacao {
-    padding: 80px 20px;
-    text-align: center;
-    background-color: #111;
-    border-top: 1px solid gold;
+.vinho {
+    background-color: #1a0000;
+}
+
+.doceria-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.doceria-content img {
+    width: 400px;
+    border: 2px solid gold;
 }
 
 footer {
-    text-align: center;
-    padding: 30px;
+    padding: 40px;
     border-top: 1px solid gold;
+    text-align: center;
 }
