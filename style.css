@@ -3,29 +3,39 @@ body {
     font-family: 'Marcellus', serif;
     background-color: #0b0b0b;
     color: white;
-    scroll-behavior: smooth;
 }
 
 nav {
     position: fixed;
     width: 100%;
-    background-color: rgba(20,0,0,0.95);
+    background-color: #2b0000;
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
+    align-items: center;
+    padding: 15px 40px;
     z-index: 1000;
 }
 
-.logo {
-    color: gold;
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 50px;
+}
+
+.logo-text {
     font-family: 'Playfair Display', serif;
+    color: gold;
     font-size: 22px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .menu a {
     color: white;
-    margin-left: 25px;
+    margin-left: 20px;
     text-decoration: none;
 }
 
@@ -36,66 +46,27 @@ nav {
     color: gold;
 }
 
-.hero-banner {
+.hero {
     height: 100vh;
-    background: 
-    linear-gradient(rgba(0,0,0,0.75), rgba(40,0,0,0.85)),
-    url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1920&auto=format&fit=crop');
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(40,0,0,0.8)),
+    url('assets/images/banner.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.hero-overlay {
-    max-width: 800px;
-}
-
-.hero-overlay h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 75px;
-    color: gold;
-    margin-bottom: 10px;
-}
-
-.hero-overlay h2 {
-    font-size: 45px;
-    color: #b30000;
-    margin-bottom: 20px;
-}
-
-.hero-overlay p {
-    font-size: 18px;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-}
-
-.btn-principal {
-    padding: 18px 40px;
-    background-color: #5c0000;
-    color: gold;
-    border: 2px solid gold;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s ease;
-}
-
-.btn-principal:hover {
-    background-color: gold;
-    color: #5c0000;
-}
 .hero-content h1 {
-    font-family: 'Playfair Display', serif;
     font-size: 70px;
     color: gold;
 }
 
 .hero-content h2 {
     font-size: 40px;
-    color: #8B0000;
+    color: #b30000;
 }
 
 .btn-principal {
@@ -107,12 +78,11 @@ nav {
 }
 
 .section {
-    padding: 100px 20px;
+    padding: 120px 20px;
     text-align: center;
 }
 
 .titulo {
-    font-family: 'Playfair Display', serif;
     color: gold;
     margin-bottom: 50px;
 }
@@ -126,14 +96,8 @@ nav {
 
 .card {
     background-color: #120000;
-    width: 300px;
+    width: 280px;
     border: 1px solid gold;
-    overflow: hidden;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
 }
 
 .card img {
@@ -142,39 +106,11 @@ nav {
     object-fit: cover;
 }
 
-.card h3 {
-    color: gold;
-}
-
-.card button {
-    background-color: #5c0000;
-    color: gold;
-    border: 1px solid gold;
-    padding: 10px 20px;
-}
-
-.info {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.4s ease;
-    padding: 0 15px;
-    font-size: 14px;
-    color: #ddd;
-}
-
 .vinho {
     background-color: #1a0000;
 }
 
-.doceria-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.doceria-content img {
+.doceria-img {
     width: 400px;
     border: 2px solid gold;
 }
@@ -184,4 +120,3 @@ footer {
     border-top: 1px solid gold;
     text-align: center;
 }
-
