@@ -3,35 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Syriana - Restaurante Árabe</title>
+<title>Syriana - Centro Árabe</title>
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<nav>
+    <div class="logo">SYRIANA</div>
+    <div class="menu">
+        <a href="#experiencias">Experiências</a>
+        <a href="#localizacao">Localização</a>
+        <a href="https://wa.me/55SEUNUMERO" class="btn-nav">Reservar</a>
+    </div>
+</nav>
+
 <header>
-    <h1>Syriana</h1>
-    <p>O Verdadeiro Sabor Árabe em Ponta Grossa</p>
-    <a href="https://wa.me/55SEUNUMERO" class="btn">Reservar pelo WhatsApp</a>
+    <div class="hero-content">
+        <h1>O Verdadeiro Sabor Árabe</h1>
+        <p>Gastronomia Síria • Cultura • Experiência</p>
+        <a href="https://wa.me/55SEUNUMERO" class="btn-principal">Faça sua Reserva</a>
+    </div>
 </header>
 
-<section class="sobre">
-    <h2>Sobre Nós</h2>
-    <p>Autêntica culinária síria com tradição e qualidade. Experimente shawarma, kibe, homus e muito mais.</p>
-</section>
+<section id="experiencias" class="destaques">
+    <h2>Nossas Experiências</h2>
 
-<section class="destaques">
-    <h2>Destaques</h2>
     <div class="cards">
-        <div class="card">Rodízio de Shawarma</div>
-        <div class="card">Sexta Árabe com Dança do Ventre</div>
-        <div class="card">Mesa Farta R$59,90</div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1604908176997-4312f7e08a9d">
+            <h3>Buffet por Kilo</h3>
+            <p>Sábados e Domingos</p>
+            <button onclick="toggleInfo('info1')">Saiba Mais</button>
+            <div id="info1" class="info">
+                Buffet completo com pratos árabes autênticos preparados com tradição síria.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947">
+            <h3>Mesa Farta</h3>
+            <p>Todos os Dias</p>
+            <button onclick="toggleInfo('info2')">Saiba Mais</button>
+            <div id="info2" class="info">
+                Experiência completa servida à mesa com variedade de pratos selecionados.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92">
+            <h3>Rodízio de Shawarma</h3>
+            <p>Domingos</p>
+            <button onclick="toggleInfo('info3')">Saiba Mais</button>
+            <div id="info3" class="info">
+                10 sabores de shawarma servidos continuamente na mesa.
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1589307004395-47d5f27b29f6">
+            <h3>Noites Árabes</h3>
+            <p>Sextas com Apresentações</p>
+            <button onclick="toggleInfo('info4')">Saiba Mais</button>
+            <div id="info4" class="info">
+                Dança do ventre e experiência cultural completa.
+            </div>
+        </div>
+
     </div>
 </section>
 
-<footer>
+<section id="localizacao" class="localizacao">
+    <h2>Visite o Syriana</h2>
     <p>Rua Augusto Ribas, 294 - Ponta Grossa</p>
-    <p>© 2026 Syriana</p>
+</section>
+
+<footer>
+    <p>© 2026 Syriana Centro Árabe</p>
 </footer>
+
+<script>
+function toggleInfo(id) {
+    var element = document.getElementById(id);
+    if (element.style.maxHeight) {
+        element.style.maxHeight = null;
+    } else {
+        element.style.maxHeight = element.scrollHeight + "px";
+    }
+}
+</script>
 
 </body>
 </html>
+
