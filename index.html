@@ -3,78 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Syriana - Centro Árabe Raiz</title>
+<title>Syriana - Centro Árabe</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Marcellus&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-    <div class="logo">SYRIANA</div>
+    <div class="logo-container">
+        <img src="assets/images/logo.png" alt="Logo Syriana" class="logo-img">
+        <span class="logo-text">SYRIANA</span>
+    </div>
+
     <div class="menu">
         <a href="#experiencias">Experiências</a>
-        <a href="#doceria">Doceria Árabe</a>
+        <a href="#doceria">Doceria</a>
         <a href="#localizacao">Localização</a>
         <a href="https://wa.me/55SEUNUMERO" class="btn-nav">Reservar</a>
     </div>
 </nav>
 
-<header class="hero-banner">
-    <div class="hero-overlay">
+<header class="hero">
+    <div class="hero-content">
         <h1>Não Somos Cópia.</h1>
         <h2>Somos Raiz.</h2>
         <p>Autêntica Gastronomia Síria • Cultura • Tradição</p>
-        <a href="https://wa.me/55SEUNUMERO" class="btn-principal">
-            Viva a Experiência Syriana
-        </a>
+        <a href="#" class="btn-principal">Viva a Experiência Syriana</a>
     </div>
 </header>
 
 <section id="experiencias" class="section">
-    <h2 class="titulo">Experiências Exclusivas</h2>
+    <h2 class="titulo">Nossas Experiências</h2>
 
     <div class="cards">
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1604908176997-4312f7e08a9d">
-            <h3>Buffet Árabe por Kilo</h3>
+            <img src="assets/images/buffet.jpg" alt="Buffet Árabe">
+            <h3>Buffet por Kilo</h3>
             <p>Sábados e Domingos</p>
-            <button onclick="toggleInfo('info1')">Descobrir</button>
-            <div id="info1" class="info">
-                Uma seleção refinada de pratos árabes preparados com receitas tradicionais sírias. Homus, kibes, arroz com especiarias, carnes temperadas e muito mais.
-            </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1544025162-d76694265947">
+            <img src="assets/images/mesa.jpg" alt="Mesa Farta">
             <h3>Mesa Farta</h3>
-            <p>Todos os Dias</p>
-            <button onclick="toggleInfo('info2')">Descobrir</button>
-            <div id="info2" class="info">
-                Uma verdadeira celebração à mesa. Pratos servidos continuamente, variedade, abundância e hospitalidade árabe.
-            </div>
+            <p>Todos os dias</p>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92">
+            <img src="assets/images/shawarma.jpg" alt="Rodízio de Shawarma">
             <h3>Rodízio de Shawarma</h3>
             <p>Domingos</p>
-            <button onclick="toggleInfo('info3')">Descobrir</button>
-            <div id="info3" class="info">
-                10 sabores diferentes de shawarma preparados com carnes selecionadas e especiarias autênticas.
-            </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1589307004395-47d5f27b29f6">
+            <img src="assets/images/noite.jpg" alt="Noite Árabe">
             <h3>Noites Árabes</h3>
-            <p>Sextas com Apresentações</p>
-            <button onclick="toggleInfo('info4')">Descobrir</button>
-            <div id="info4" class="info">
-                Dança do ventre, ambiente luxuoso, música oriental e gastronomia que transporta você ao Oriente Médio.
-            </div>
+            <p>Sextas com apresentações</p>
         </div>
 
     </div>
@@ -82,17 +68,7 @@
 
 <section id="doceria" class="section vinho">
     <h2 class="titulo">Doceria Árabe Autêntica</h2>
-    <div class="doceria-content">
-        <img src="https://images.unsplash.com/photo-1598514982410-5d3e5d6a0d5c">
-        <div>
-            <p>
-                Nossa doceria é feita com receitas tradicionais transmitidas por gerações.
-                Baklava, doces com pistache, nozes e caldas aromáticas.
-                Aqui não é adaptação.
-                É tradição.
-            </p>
-        </div>
-    </div>
+    <img src="assets/images/doceria.jpg" alt="Doceria Árabe" class="doceria-img">
 </section>
 
 <section id="localizacao" class="section">
@@ -101,20 +77,8 @@
 </section>
 
 <footer>
-    <p>© 2026 Syriana Centro Árabe - Raiz Síria</p>
+    <p>© 2026 Syriana Centro Árabe</p>
 </footer>
-
-<script>
-function toggleInfo(id) {
-    var element = document.getElementById(id);
-    if (element.style.maxHeight) {
-        element.style.maxHeight = null;
-    } else {
-        element.style.maxHeight = element.scrollHeight + "px";
-    }
-}
-</script>
 
 </body>
 </html>
-
