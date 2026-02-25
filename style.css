@@ -50,7 +50,7 @@ nav {
     height: 100vh;
     background:
     linear-gradient(rgba(0,0,0,0.7), rgba(40,0,0,0.8)),
-    url('assets/images/banner.jpg');
+    url('./assets/images/banner.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
