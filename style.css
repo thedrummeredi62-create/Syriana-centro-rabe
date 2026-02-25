@@ -1,14 +1,22 @@
-body {
+/* RESET */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Marcellus', serif;
     background-color: #0b0b0b;
     color: white;
 }
 
+/* NAVBAR */
 nav {
     position: fixed;
+    top: 0;
     width: 100%;
-    background-color: #2b0000;
+    background-color: rgba(43, 0, 0, 0.95);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +31,7 @@ nav {
 }
 
 .logo-img {
-    height: 50px;
+    height: 55px;
 }
 
 .logo-text {
@@ -37,6 +45,11 @@ nav {
     color: white;
     margin-left: 20px;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: gold;
 }
 
 .btn-nav {
@@ -46,27 +59,50 @@ nav {
     color: gold;
 }
 
+/* HERO BANNER */
 .hero {
+    position: relative;
     height: 100vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.7), rgba(40,0,0,0.8)),
-    url('/Syriana-centro-rabe/assets/imagens/banner.jpg');
+    width: 100%;
+    background-image: url('/Syriana-centro-rabe/assets/imagens/banner.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
+/* OVERLAY ESCURO */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(40,0,0,0.7));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
 .hero-content h1 {
     font-size: 70px;
     color: gold;
+    margin-bottom: 10px;
 }
 
 .hero-content h2 {
     font-size: 40px;
     color: #b30000;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    margin-bottom: 30px;
+    letter-spacing: 1px;
 }
 
 .btn-principal {
@@ -75,8 +111,15 @@ nav {
     color: gold;
     border: 2px solid gold;
     text-decoration: none;
+    transition: 0.3s;
 }
 
+.btn-principal:hover {
+    background-color: gold;
+    color: #5c0000;
+}
+
+/* SEÇÕES */
 .section {
     padding: 120px 20px;
     text-align: center;
@@ -85,8 +128,11 @@ nav {
 .titulo {
     color: gold;
     margin-bottom: 50px;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
 }
 
+/* CARDS */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -98,6 +144,11 @@ nav {
     background-color: #120000;
     width: 280px;
     border: 1px solid gold;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
 }
 
 .card img {
@@ -106,17 +157,53 @@ nav {
     object-fit: cover;
 }
 
+.card h3 {
+    margin-top: 15px;
+    color: gold;
+}
+
+.card p {
+    padding: 10px 15px 20px;
+}
+
+/* DOCERIA */
 .vinho {
     background-color: #1a0000;
 }
 
 .doceria-img {
     width: 400px;
+    max-width: 90%;
     border: 2px solid gold;
 }
 
+/* FOOTER */
 footer {
     padding: 40px;
     border-top: 1px solid gold;
     text-align: center;
+    background-color: #120000;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content h2 {
+        font-size: 26px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
