@@ -20,7 +20,7 @@
     <div class="menu">
         <a href="#experiencias">Experiências</a>
         <a href="#doceria">Doceria</a>
-        <a href="#reserva">Reservas</a>
+        <a href="reserva.html" target="_blank" class="btn-reserva">Reservar</a>
     </div>
 </nav>
 
@@ -37,106 +37,45 @@
 
     <div class="cards">
 
-        <div class="card" onclick="abrirModal('buffet')">
+        <div class="card">
             <img src="/Syriana-centro-rabe/assets/imagens/buffet.jpg">
             <h3>Buffet por Kilo</h3>
-            <p>Sábados e Domingos</p>
+            <p>Sábados e Domingos • Cardápio variado tradicional</p>
         </div>
 
-        <div class="card" onclick="abrirModal('shawarma')">
+        <div class="card">
             <img src="/Syriana-centro-rabe/assets/imagens/shawarma.jpg">
             <h3>Rodízio de Shawarma</h3>
-            <p>A partir das 19h30</p>
+            <p>Domingos a partir das 19h30 • 10 sabores exclusivos</p>
         </div>
 
-        <div class="card" onclick="abrirModal('noite')">
+        <div class="card">
             <img src="/Syriana-centro-rabe/assets/imagens/noite.jpg">
             <h3>Noites Árabes</h3>
-            <p>Sextas-feiras</p>
+            <p>Sextas com apresentações culturais ao vivo</p>
         </div>
 
-        <div class="card" onclick="abrirModal('doceriaModal')">
+        <div class="card">
             <img src="/Syriana-centro-rabe/assets/imagens/doceria.jpg">
             <h3>Doceria & Empório</h3>
-            <p>Doces artesanais árabes</p>
+            <p>Doces artesanais árabes e produtos importados</p>
         </div>
 
     </div>
 </section>
 
-<!-- MODAIS -->
-
-<div id="buffet" class="modal">
-<div class="modal-content">
-<span class="fechar" onclick="fecharModal('buffet')">&times;</span>
-<h2>Buffet por Kilo – Tradição Síria-Libanesa</h2>
-<img src="/Syriana-centro-rabe/assets/imagens/buffet.jpg">
-<p>Servido aos sábados e domingos, nosso Buffet por Kilo apresenta um cardápio amplo com receitas tradicionais autênticas.</p>
-<p>Homus, Babaganuj, Kafta, Kibe Cru, Arroz Sírio, Charutos, Mujaddara, saladas frescas e pratos quentes preparados com especiarias importadas.</p>
-<p>Você escolhe no seu ritmo. Sem adaptações. Sem suavizações. Cultura verdadeira no prato.</p>
-</div>
-</div>
-
-<div id="shawarma" class="modal">
-<div class="modal-content">
-<span class="fechar" onclick="fecharModal('shawarma')">&times;</span>
-<h2>Rodízio de Shawarma</h2>
-<img src="/Syriana-centro-rabe/assets/imagens/shawarma.jpg">
-<p>Domingos a partir das 19h30.</p>
-<p>10 sabores exclusivos: 7 salgados e 3 doces.</p>
-<ul>
-<li>Frango tradicional</li>
-<li>Carne bovina</li>
-<li>Kafta especial</li>
-<li>Falafel</li>
-<li>Vegetariano</li>
-<li>Shawarma picante</li>
-<li>Especial da casa</li>
-<li>Banana com doce árabe</li>
-<li>Chocolate com pistache</li>
-<li>Doce sírio tradicional</li>
-</ul>
-<p>Uma experiência completa, servida direto na mesa.</p>
-</div>
-</div>
-
-<div id="noite" class="modal">
-<div class="modal-content">
-<span class="fechar" onclick="fecharModal('noite')">&times;</span>
-<h2>Noites Árabes</h2>
-<img src="/Syriana-centro-rabe/assets/imagens/noite.jpg">
-<p>Todas as sextas-feiras.</p>
-<p>Gastronomia completa + apresentações culturais ao vivo.</p>
-<p>Clima sofisticado, música tradicional, dança e uma imersão cultural verdadeira.</p>
-</div>
-</div>
-
-<div id="doceriaModal" class="modal">
-<div class="modal-content">
-<span class="fechar" onclick="fecharModal('doceriaModal')">&times;</span>
-<h2>Doceria & Empório Árabe</h2>
-<img src="/Syriana-centro-rabe/assets/imagens/doceria.jpg">
-<p>Doces artesanais árabes feitos com técnicas tradicionais.</p>
-<p>Baklava, Mamoul, Ninho com pistache, Harissa e muito mais.</p>
-<p>Também contamos com empório de produtos importados.</p>
-</div>
-</div>
-
-<section id="reserva" class="section">
-<h2 class="titulo">Reservas</h2>
-<a class="botao-reserva" href="https://wa.me/5542998340063" target="_blank">
-Reservar via WhatsApp
-</a>
+<section id="doceria" class="section">
+    <h2 class="titulo">Tradição Síria-Libanesa Autêntica</h2>
+    <p class="descricao">
+    No Syriana não adaptamos receitas. Mantemos a essência original.
+    Não suavizamos temperos. Não criamos versões.
+    Aqui você vive a cultura verdadeira.
+    </p>
 </section>
 
-<script>
-function abrirModal(id) {
-document.getElementById(id).classList.add("ativo");
-}
-function fecharModal(id) {
-document.getElementById(id).classList.remove("ativo");
-}
-</script>
+<footer>
+<p>© 2026 Syriana Centro Árabe</p>
+</footer>
 
 </body>
 </html>
