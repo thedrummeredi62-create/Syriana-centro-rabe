@@ -16,13 +16,6 @@
         <img src="/Syriana-centro-rabe/assets/imagens/logo.png" class="logo-img">
         <span class="logo-text">SYRIANA</span>
     </div>
-    <div class="menu">
-        <a href="#experiencias">Experiências</a>
-        <a href="#manifesto">Nossa Raiz</a>
-        <a href="#doceria">Doceria</a>
-        <a href="#reservas">Reservas</a>
-        <a href="#localizacao">Localização</a>
-    </div>
 </nav>
 
 <header class="hero">
@@ -30,109 +23,125 @@
         <h1>Não Somos Cópia.</h1>
         <h2>Somos Raiz.</h2>
         <p>Alta Gastronomia Síria-Libanesa • Tradição Verdadeira</p>
-        <a href="#reservas" class="btn-principal">Reservar Mesa</a>
     </div>
 </header>
 
-<section id="manifesto" class="section vinho">
-    <h2 class="titulo">Tradição Síria-Libanesa Autêntica</h2>
-    <p class="texto-central">
-        O Syriana foi construído com base na tradição síria-libanesa verdadeira.
-        Não adaptamos receitas.
-        Mantemos a essência.
-        Aqui você vive a origem.
-    </p>
-</section>
-
-<section id="experiencias" class="section">
+<section class="section">
     <h2 class="titulo">Experiências Syriana</h2>
 
     <div class="cards">
 
-        <div class="card">
+        <div class="card" onclick="abrirModal('buffetModal')">
             <img src="/Syriana-centro-rabe/assets/imagens/buffet.jpg">
             <h3>Buffet por Kilo</h3>
-            <p>Sábados e Domingos.</p>
+            <p>Sábados e Domingos</p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="abrirModal('noiteModal')">
             <img src="/Syriana-centro-rabe/assets/imagens/noite.jpg">
             <h3>Noites Árabes</h3>
-            <p>Sextas com apresentações.</p>
+            <p>Sextas – a partir das 19h30</p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="abrirModal('shawarmaModal')">
             <img src="/Syriana-centro-rabe/assets/imagens/shawarma.jpg">
             <h3>Rodízio de Shawarma</h3>
-            <p>Domingos.</p>
+            <p>Domingos – a partir das 19h30</p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="abrirModal('mesaModal')">
             <img src="/Syriana-centro-rabe/assets/imagens/mesa.jpg">
             <h3>Mesa Farta</h3>
-            <p>Todos os dias.</p>
+            <p>Todos os dias</p>
+        </div>
+
+        <div class="card" onclick="abrirModal('doceriaModal')">
+            <img src="/Syriana-centro-rabe/assets/imagens/doceria.jpg">
+            <h3>Doceria & Empório</h3>
+            <p>Doces artesanais e produtos árabes</p>
         </div>
 
     </div>
 </section>
 
-<section id="doceria" class="section vinho">
-    <h2 class="titulo">Doceria Árabe – Arte Oriental</h2>
-    <img src="/Syriana-centro-rabe/assets/imagens/doceria.jpg" class="doceria-img">
-</section>
+<!-- MODAIS -->
 
-<section id="reservas" class="section">
-    <h2 class="titulo">Reserva Oficial Syriana</h2>
+<div id="buffetModal" class="modal">
+<div class="modal-content">
+<span class="fechar" onclick="fecharModal('buffetModal')">&times;</span>
+<h2>Buffet por Kilo</h2>
+<img src="/Syriana-centro-rabe/assets/imagens/buffet.jpg">
+<p>
+Servido aos sábados e domingos, nosso Buffet por Kilo oferece um cardápio variado com receitas tradicionais sírio-libanesas.
+Homus, Babaganuj, Kafta, Kibe cru, Arroz Sírio, Charutos, saladas frescas e pratos quentes preparados com especiarias autênticas.
+Ideal para quem deseja experimentar diversidade com liberdade.
+</p>
+</div>
+</div>
 
-    <form id="formReserva" class="form-reserva">
-        <input type="text" id="nome" placeholder="Nome completo" required>
-        <input type="tel" id="telefone" placeholder="Seu WhatsApp" required>
-        <input type="date" id="data" required>
-        <input type="time" id="hora" required>
-        <input type="number" id="pessoas" placeholder="Quantidade de pessoas" required>
+<div id="shawarmaModal" class="modal">
+<div class="modal-content">
+<span class="fechar" onclick="fecharModal('shawarmaModal')">&times;</span>
+<h2>Rodízio de Shawarma</h2>
+<img src="/Syriana-centro-rabe/assets/imagens/shawarma.jpg">
+<p>
+Todos os domingos a partir das 19h30.
+10 sabores exclusivos de shawarma:
+7 salgados e 3 doces.
+Preparados com temperos importados e técnica original.
+Experiência intensa, autêntica e abundante.
+</p>
+</div>
+</div>
 
-        <button type="submit" class="btn-principal">
-            Enviar Reserva
-        </button>
-    </form>
+<div id="noiteModal" class="modal">
+<div class="modal-content">
+<span class="fechar" onclick="fecharModal('noiteModal')">&times;</span>
+<h2>Noites Árabes</h2>
+<img src="/Syriana-centro-rabe/assets/imagens/noite.jpg">
+<p>
+Sextas-feiras a partir das 19h30.
+Ambiente sofisticado, apresentações de dança árabe e cardápio especial:
+Shawarma, Kafta, Kibe cru, Kibe frito, Homus, Babaganuj, Arroz Sírio e doces árabes.
+Uma noite de tradição, cultura e elegância.
+</p>
+</div>
+</div>
 
-    <p class="texto-central" style="margin-top:20px;">
-        Reservas confirmadas após resposta da equipe Syriana.
-    </p>
-</section>
+<div id="mesaModal" class="modal">
+<div class="modal-content">
+<span class="fechar" onclick="fecharModal('mesaModal')">&times;</span>
+<h2>Mesa Farta</h2>
+<img src="/Syriana-centro-rabe/assets/imagens/mesa.jpg">
+<p>
+Servida todos os dias.
+Diversidade e abundância na mesa.
+Ideal para famílias e celebrações.
+Uma experiência completa com pratos tradicionais preparados como manda a tradição.
+</p>
+</div>
+</div>
 
-<section id="localizacao" class="section vinho">
-    <h2 class="titulo">Localização</h2>
-    <p class="texto-central">
-        Rua Augusto Ribas, 294 – Ponta Grossa
-    </p>
-</section>
-
-<footer>
-    <p>© 2026 Syriana Centro Árabe – Não Adaptamos. Mantemos a Essência.</p>
-</footer>
-
-<a href="https://wa.me/5542998340063" class="whatsapp-fixo">Reservas</a>
+<div id="doceriaModal" class="modal">
+<div class="modal-content">
+<span class="fechar" onclick="fecharModal('doceriaModal')">&times;</span>
+<h2>Doceria & Empório Árabe</h2>
+<img src="/Syriana-centro-rabe/assets/imagens/doceria.jpg">
+<p>
+Doces árabes artesanais preparados com nozes selecionadas e mel na medida exata.
+Baklava, Mamul, Harissa e outras receitas tradicionais.
+Também contamos com empório de produtos árabes importados.
+</p>
+</div>
+</div>
 
 <script>
-document.getElementById("formReserva").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const nome = document.getElementById("nome").value;
-    const telefone = document.getElementById("telefone").value;
-    const data = document.getElementById("data").value;
-    const hora = document.getElementById("hora").value;
-    const pessoas = document.getElementById("pessoas").value;
-
-    const mensagem = `Olá, gostaria de fazer uma reserva no Syriana.%0A%0A
-Nome: ${nome}%0A
-Telefone: ${telefone}%0A
-Data: ${data}%0A
-Horário: ${hora}%0A
-Quantidade de pessoas: ${pessoas}`;
-
-    window.open(`https://wa.me/5542998340063?text=${mensagem}`, "_blank");
-});
+function abrirModal(id){
+document.getElementById(id).style.display="flex";
+}
+function fecharModal(id){
+document.getElementById(id).style.display="none";
+}
 </script>
 
 </body>
