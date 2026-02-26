@@ -1,16 +1,16 @@
-* {
+*{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
-body {
+body{
 background:#000;
 color:#eee;
 font-family:'Marcellus', serif;
 }
 
-nav {
+nav{
 position:fixed;
 width:100%;
 background:#0b0b0b;
@@ -22,17 +22,17 @@ border-bottom:1px solid #8c6b1f;
 z-index:1000;
 }
 
-.logo-area {
+.logo-area{
 display:flex;
 align-items:center;
 gap:15px;
 }
 
-.logo-area img {
+.logo-area img{
 height:50px;
 }
 
-.logo-area span {
+.logo-area span{
 font-family:'Playfair Display', serif;
 font-weight:800;
 background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b,#8c6b1f);
@@ -42,13 +42,19 @@ letter-spacing:3px;
 font-size:22px;
 }
 
-.menu a {
+.menu a{
 color:#ccc;
 margin-left:25px;
 text-decoration:none;
 }
 
-.hero {
+.btn-reserva{
+padding:8px 20px;
+border:1px solid #d4af37;
+color:#d4af37;
+}
+
+.hero{
 height:100vh;
 background:url('/Syriana-centro-rabe/assets/imagens/banner.jpg') center/cover no-repeat;
 display:flex;
@@ -58,19 +64,19 @@ text-align:center;
 position:relative;
 }
 
-.hero::before {
+.hero::before{
 content:"";
 position:absolute;
 inset:0;
 background:rgba(0,0,0,0.75);
 }
 
-.hero-content {
+.hero-content{
 position:relative;
 z-index:2;
 }
 
-.hero h1 {
+.hero h1{
 font-family:'Playfair Display', serif;
 font-size:70px;
 background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
@@ -78,110 +84,115 @@ background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
 -webkit-text-fill-color:transparent;
 }
 
-.hero h2 {
+.hero h2{
 color:#d4af37;
 font-size:38px;
 margin:20px 0;
 }
 
-.section {
+.section{
 padding:120px 20px;
 text-align:center;
 }
 
-.titulo {
+.titulo{
 font-family:'Playfair Display', serif;
 font-size:42px;
-margin-bottom:60px;
-background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b,#8c6b1f);
+margin-bottom:40px;
+background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-.cards {
+.cards{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:40px;
 }
 
-.card {
+.card{
 background:#111;
 border:1px solid #8c6b1f;
 width:300px;
-cursor:pointer;
 transition:0.4s;
 }
 
-.card:hover {
+.card:hover{
 transform:translateY(-10px);
 box-shadow:0 0 25px rgba(212,175,55,0.6);
 }
 
-.card img {
+.card img{
 width:100%;
 height:220px;
 object-fit:cover;
 }
 
-.card h3 {
+.card h3{
 color:#d4af37;
 margin:15px 0;
 }
 
-.modal {
-display:none;
-position:fixed;
-inset:0;
-background:rgba(0,0,0,0.9);
+.descricao{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+}
+
+/* RESERVA */
+
+.reserva-body{
+display:flex;
 justify-content:center;
 align-items:center;
-z-index:2000;
-}
-
-.modal.ativo {
-display:flex;
-}
-
-.modal-content {
+height:100vh;
 background:#000;
-border:2px solid #b8860b;
-padding:40px;
-max-width:800px;
-width:90%;
-box-shadow:0 0 40px rgba(212,175,55,0.6);
-position:relative;
 }
 
-.modal-content h2 {
+.reserva-container{
+background:#111;
+padding:50px;
+width:400px;
+border:1px solid #b8860b;
+box-shadow:0 0 30px rgba(212,175,55,0.5);
+}
+
+.reserva-container h1{
+font-family:'Playfair Display', serif;
+text-align:center;
 margin-bottom:20px;
 background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-.modal-content img {
-width:100%;
-height:300px;
-object-fit:cover;
-margin-bottom:20px;
+.reserva-container p{
+text-align:center;
+margin-bottom:25px;
 }
 
-.fechar {
-position:absolute;
-top:15px;
-right:20px;
+.reserva-container label{
+display:block;
+margin-top:15px;
+margin-bottom:5px;
 color:#d4af37;
-font-size:28px;
-cursor:pointer;
 }
 
-.botao-reserva {
-display:inline-block;
-padding:18px 40px;
+.reserva-container input{
+width:100%;
+padding:10px;
+background:#000;
+border:1px solid #555;
+color:white;
+}
+
+.reserva-container button{
+margin-top:25px;
+width:100%;
+padding:12px;
 background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
-color:black;
+border:none;
 font-weight:bold;
-text-decoration:none;
-margin-top:30px;
+cursor:pointer;
 }
