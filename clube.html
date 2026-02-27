@@ -6,55 +6,158 @@
 <title>Clube Syriana</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Marcellus&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Marcellus', serif;
+background:#000;
+color:#eee;
+}
+
+/* HERO */
+
+.hero{
+height:80vh;
+background:linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+url('assets/imagens/noite.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px;
+}
+
+.hero h1{
+font-family:'Playfair Display', serif;
+font-size:60px;
+background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+color:#ccc;
+}
+
+/* FORM SECTION */
+
+.form-section{
+padding:120px 20px;
+display:flex;
+justify-content:center;
+background:#0d0d0d;
+}
+
+.form-card{
+background:linear-gradient(145deg,#111,#000);
+border:1px solid #b8860b;
+padding:60px;
+width:420px;
+box-shadow:0 0 40px rgba(212,175,55,0.4);
+display:flex;
+flex-direction:column;
+}
+
+.form-card h2{
+text-align:center;
+margin-bottom:40px;
+font-family:'Playfair Display', serif;
+background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+form{
+display:flex;
+flex-direction:column; /* FORÇA VERTICAL */
+}
+
+label{
+margin-top:20px;
+margin-bottom:6px;
+color:#d4af37;
+font-weight:bold;
+}
+
+input{
+padding:14px;
+background:#000;
+border:1px solid #333;
+color:white;
+}
+
+input:focus{
+border:1px solid #d4af37;
+outline:none;
+box-shadow:0 0 10px rgba(212,175,55,0.4);
+}
+
+button{
+margin-top:40px;
+padding:16px;
+background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
+border:none;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.03);
+box-shadow:0 0 20px rgba(212,175,55,0.6);
+}
+</style>
 </head>
 
 <body>
 
-<!-- HERO DO CLUBE -->
-
-<section class="clube-hero">
-    <div class="hero-overlay">
-        <h1>Clube Syriana</h1>
-        <p class="hero-sub">
-            O Syriana agora é mais que restaurante. É clube.
-        </p>
-        <p class="hero-desc">
-            Ao se cadastrar, você passa a fazer parte da Casa dos Árabes.
-            Receba vantagens exclusivas, benefícios especiais,
-            prioridade em eventos culturais e experiências reservadas.
-            Aqui tradição não é adaptação. É raiz.
-        </p>
-    </div>
+<section class="hero">
+<div>
+<h1>Clube Syriana</h1>
+<p>
+O Syriana agora é mais que restaurante. É clube.
+Ao se cadastrar, você passa a fazer parte da Casa dos Árabes.
+Receba vantagens exclusivas, benefícios especiais e prioridade em eventos culturais.
+Aqui tradição não é adaptação. É raiz.
+</p>
+</div>
 </section>
 
-<!-- FORMULÁRIO -->
+<section class="form-section">
 
-<section class="form-body">
+<div class="form-card">
 
-    <div class="form-card">
+<h2>Cadastro Exclusivo</h2>
 
-        <h2>Cadastro Exclusivo</h2>
+<form onsubmit="enviarClube(event)">
 
-        <form onsubmit="enviarClube(event)">
+<label>Nome completo</label>
+<input type="text" id="nome" required>
 
-            <label>Nome completo</label>
-            <input type="text" id="nome" required>
+<label>Endereço</label>
+<input type="text" id="endereco" required>
 
-            <label>Endereço</label>
-            <input type="text" id="endereco" required>
+<label>WhatsApp</label>
+<input type="tel" id="telefone" required>
 
-            <label>WhatsApp</label>
-            <input type="tel" id="telefone" required>
+<label>Data de nascimento</label>
+<input type="date" id="nascimento" required>
 
-            <label>Data de nascimento</label>
-            <input type="date" id="nascimento" required>
+<button type="submit">Finalizar Cadastro</button>
 
-            <button type="submit">Finalizar Cadastro</button>
+</form>
 
-        </form>
-
-    </div>
+</div>
 
 </section>
 
