@@ -8,6 +8,7 @@ body{
 font-family:'Marcellus', serif;
 background:#000;
 color:#eee;
+padding-top:100px; /* compensa menu fixo */
 }
 
 /* ================= NAV ================= */
@@ -62,7 +63,7 @@ border:1px solid #d4af37;
 color:#d4af37;
 }
 
-/* ================= HERO HOME ================= */
+/* ================= HERO ================= */
 
 .hero{
 height:100vh;
@@ -72,7 +73,6 @@ align-items:center;
 justify-content:center;
 text-align:center;
 position:relative;
-padding-top:80px;
 }
 
 .hero::before{
@@ -99,6 +99,10 @@ background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
 color:#d4af37;
 font-size:38px;
 margin:20px 0;
+}
+
+.hero p{
+color:#ccc;
 }
 
 /* ================= SECTIONS ================= */
@@ -128,6 +132,7 @@ gap:40px;
 background:#111;
 border:1px solid #8c6b1f;
 width:300px;
+padding-bottom:20px;
 transition:0.4s;
 }
 
@@ -147,13 +152,23 @@ color:#d4af37;
 margin:15px 0;
 }
 
+.card p{
+padding:0 15px;
+color:#ccc;
+}
+
+/* ================= CLUBE HOME ================= */
+
+.clube-section{
+background:#0d0d0d;
+}
+
 .descricao{
 max-width:800px;
 margin:auto;
 line-height:1.8;
+color:#ccc;
 }
-
-/* ================= BOTÕES ================= */
 
 .botao-principal{
 display:inline-block;
@@ -170,120 +185,14 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* ================= FORMULÁRIOS (RESERVA E CLUBE) ================= */
+/* ================= FOOTER ================= */
 
-.form-body{
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-background:#000;
-padding:40px 0;
-}
-
-.form-container,
-.form-card{
-background:linear-gradient(145deg,#111,#000);
-border:1px solid #b8860b;
-padding:60px;
-width:420px;
-box-shadow:0 0 40px rgba(212,175,55,0.5);
-}
-
-.form-container h1,
-.form-card h2{
+footer{
+padding:40px;
+border-top:1px solid #8c6b1f;
 text-align:center;
-margin-bottom:30px;
-font-family:'Playfair Display', serif;
-background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.form-container label,
-.form-card label{
-display:block;
-margin-top:18px;
-margin-bottom:6px;
-color:#d4af37;
-font-weight:bold;
-font-size:14px;
-}
-
-.form-container input,
-.form-card input{
-width:100%;
-padding:14px;
-background:#000;
-border:1px solid #333;
-color:white;
-font-size:14px;
-transition:0.3s;
-}
-
-.form-container input:focus,
-.form-card input:focus{
-border:1px solid #d4af37;
-outline:none;
-box-shadow:0 0 10px rgba(212,175,55,0.4);
-}
-
-.form-container button,
-.form-card button{
-margin-top:30px;
-width:100%;
-padding:16px;
-background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b,#8c6b1f);
-border:none;
-font-weight:bold;
-cursor:pointer;
-transition:0.3s;
-}
-
-.form-container button:hover,
-.form-card button:hover{
-transform:scale(1.03);
-box-shadow:0 0 20px rgba(212,175,55,0.7);
-}
-
-/* ================= CLUBE HERO ================= */
-
-.clube-hero{
-height:80vh;
-background:url('/Syriana-centro-rabe/assets/imagens/noite.jpg') center/cover no-repeat;
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-}
-
-.hero-overlay{
-background:rgba(0,0,0,0.85);
-padding:80px 20px;
-width:100%;
-}
-
-.hero-overlay h1{
-font-family:'Playfair Display', serif;
-font-size:60px;
-background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-margin-bottom:20px;
-}
-
-.hero-sub{
-font-size:22px;
-color:#d4af37;
-margin-bottom:20px;
-}
-
-.hero-desc{
-max-width:800px;
-margin:auto;
-line-height:1.8;
-color:#ccc;
+background:#0b0b0b;
+color:#888;
 }
 
 /* ================= RESPONSIVO ================= */
@@ -304,10 +213,5 @@ font-size:40px;
 }
 .hero h2{
 font-size:24px;
-}
-.form-container,
-.form-card{
-width:95%;
-padding:40px;
 }
 }
