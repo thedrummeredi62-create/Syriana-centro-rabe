@@ -5,213 +5,134 @@ box-sizing:border-box;
 }
 
 body{
+font-family:'Marcellus', serif;
 background:#000;
 color:#eee;
-font-family:'Marcellus', serif;
 }
 
-/* NAV */
+/* ================= HERO ================= */
 
-nav{
-position:fixed;
+.clube-hero{
+height:80vh;
+background:url('/Syriana-centro-rabe/assets/imagens/noite.jpg') center/cover no-repeat;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero-overlay{
+background:rgba(0,0,0,0.85);
+padding:80px 20px;
 width:100%;
-background:#0b0b0b;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-border-bottom:1px solid #8c6b1f;
-z-index:1000;
 }
 
-.logo-area{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo-area img{
-height:50px;
-}
-
-.logo-area span{
+.hero-overlay h1{
 font-family:'Playfair Display', serif;
-font-weight:800;
+font-size:70px;
 background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b,#8c6b1f);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-letter-spacing:3px;
-font-size:22px;
+margin-bottom:20px;
 }
 
-.menu a{
-color:#ccc;
-margin-left:25px;
-text-decoration:none;
-}
-
-.btn-reserva{
-padding:8px 18px;
-border:1px solid #d4af37;
+.hero-sub{
+font-size:24px;
 color:#d4af37;
+margin-bottom:20px;
 }
 
-/* HERO */
-
-.hero{
-height:100vh;
-background:url('/Syriana-centro-rabe/assets/imagens/banner.jpg') center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.75);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-}
-
-.hero h1{
-font-family:'Playfair Display', serif;
-font-size:70px;
-background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.hero h2{
-color:#d4af37;
-font-size:38px;
-margin:20px 0;
-}
-
-/* SECTIONS */
-
-.section{
-padding:120px 20px;
-text-align:center;
-}
-
-.titulo{
-font-family:'Playfair Display', serif;
-font-size:42px;
-margin-bottom:40px;
-background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:40px;
-}
-
-.card{
-background:#111;
-border:1px solid #8c6b1f;
-width:300px;
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px rgba(212,175,55,0.6);
-}
-
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.card h3{
-color:#d4af37;
-margin:15px 0;
-}
-
-.descricao{
+.hero-desc{
 max-width:800px;
 margin:auto;
 line-height:1.8;
+color:#ccc;
 }
 
-.clube-section{
-background:#0d0d0d;
-}
+/* ================= FORM SECTION ================= */
 
-.botao-principal{
-display:inline-block;
-margin-top:30px;
-padding:15px 40px;
-background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
-color:black;
-font-weight:bold;
-text-decoration:none;
-}
-
-/* FORMULÁRIOS */
-
-.form-body{
+.clube-form-section{
+padding:120px 20px;
 display:flex;
 justify-content:center;
-align-items:center;
-height:100vh;
-background:#000;
+background:#0a0a0a;
 }
 
-.form-container{
-background:#111;
-padding:50px;
-width:400px;
+.form-card{
+background:linear-gradient(145deg,#111,#000);
 border:1px solid #b8860b;
-box-shadow:0 0 30px rgba(212,175,55,0.5);
+padding:60px;
+width:420px;
+box-shadow:0 0 50px rgba(212,175,55,0.5);
 }
 
-.form-container h1{
+.form-card h2{
 text-align:center;
-margin-bottom:20px;
+margin-bottom:40px;
+font-family:'Playfair Display', serif;
+font-size:32px;
 background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-.form-container p{
-text-align:center;
-margin-bottom:25px;
-}
+/* ================= FORM INPUTS ================= */
 
-.form-container label{
+.form-card label{
 display:block;
-margin-top:15px;
-margin-bottom:5px;
+margin-top:20px;
+margin-bottom:6px;
 color:#d4af37;
+font-weight:bold;
+font-size:14px;
+letter-spacing:1px;
 }
 
-.form-container input{
+.form-card input{
 width:100%;
-padding:10px;
+padding:14px;
 background:#000;
-border:1px solid #555;
+border:1px solid #333;
 color:white;
+font-size:14px;
+transition:0.3s;
 }
 
-.form-container button{
-margin-top:25px;
+.form-card input:focus{
+border:1px solid #d4af37;
+outline:none;
+box-shadow:0 0 10px rgba(212,175,55,0.4);
+}
+
+/* ================= BUTTON ================= */
+
+.form-card button{
+margin-top:40px;
 width:100%;
-padding:12px;
-background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
+padding:16px;
+background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b,#8c6b1f);
 border:none;
 font-weight:bold;
+font-size:14px;
+letter-spacing:1px;
 cursor:pointer;
+transition:0.3s;
+}
+
+.form-card button:hover{
+transform:scale(1.03);
+box-shadow:0 0 20px rgba(212,175,55,0.7);
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media(max-width:600px){
+.form-card{
+width:95%;
+padding:40px;
+}
+.hero-overlay h1{
+font-size:40px;
+}
 }
