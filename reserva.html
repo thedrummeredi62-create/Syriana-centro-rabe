@@ -9,14 +9,14 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="reserva-body">
+<body class="form-body">
 
-<section class="reserva-container">
+<section class="form-container">
 
 <h1>Reserva Syriana</h1>
-<p>Preencha os dados abaixo para garantir sua experiência.</p>
+<p>Preencha os dados para garantir sua experiência.</p>
 
-<form onsubmit="enviarWhats(event)">
+<form onsubmit="enviarReserva(event)">
 
 <label>Nome completo</label>
 <input type="text" id="nome" required>
@@ -40,7 +40,7 @@
 </section>
 
 <script>
-function enviarWhats(event){
+function enviarReserva(event){
 event.preventDefault();
 
 let nome = document.getElementById("nome").value;
@@ -49,14 +49,14 @@ let data = document.getElementById("data").value;
 let hora = document.getElementById("hora").value;
 let pessoas = document.getElementById("pessoas").value;
 
-let mensagem = `Olá, gostaria de fazer uma reserva no Syriana.%0A
+let msg = `Olá, gostaria de fazer uma reserva no Syriana.%0A
 Nome: ${nome}%0A
 Telefone: ${telefone}%0A
 Data: ${data}%0A
 Horário: ${hora}%0A
 Pessoas: ${pessoas}`;
 
-window.open(`https://wa.me/5542998340063?text=${mensagem}`, "_blank");
+window.open(`https://wa.me/5542998340063?text=${msg}`, "_blank");
 }
 </script>
 
