@@ -10,6 +10,8 @@ color:#eee;
 font-family:'Marcellus', serif;
 }
 
+/* NAV */
+
 nav{
 position:fixed;
 width:100%;
@@ -49,10 +51,12 @@ text-decoration:none;
 }
 
 .btn-reserva{
-padding:8px 20px;
+padding:8px 18px;
 border:1px solid #d4af37;
 color:#d4af37;
 }
+
+/* HERO */
 
 .hero{
 height:100vh;
@@ -89,6 +93,8 @@ color:#d4af37;
 font-size:38px;
 margin:20px 0;
 }
+
+/* SECTIONS */
 
 .section{
 padding:120px 20px;
@@ -140,9 +146,23 @@ margin:auto;
 line-height:1.8;
 }
 
-/* RESERVA */
+.clube-section{
+background:#0d0d0d;
+}
 
-.reserva-body{
+.botao-principal{
+display:inline-block;
+margin-top:30px;
+padding:15px 40px;
+background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
+color:black;
+font-weight:bold;
+text-decoration:none;
+}
+
+/* FORMULÁRIOS */
+
+.form-body{
 display:flex;
 justify-content:center;
 align-items:center;
@@ -150,7 +170,7 @@ height:100vh;
 background:#000;
 }
 
-.reserva-container{
+.form-container{
 background:#111;
 padding:50px;
 width:400px;
@@ -158,8 +178,7 @@ border:1px solid #b8860b;
 box-shadow:0 0 30px rgba(212,175,55,0.5);
 }
 
-.reserva-container h1{
-font-family:'Playfair Display', serif;
+.form-container h1{
 text-align:center;
 margin-bottom:20px;
 background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
@@ -167,19 +186,19 @@ background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
 -webkit-text-fill-color:transparent;
 }
 
-.reserva-container p{
+.form-container p{
 text-align:center;
 margin-bottom:25px;
 }
 
-.reserva-container label{
+.form-container label{
 display:block;
 margin-top:15px;
 margin-bottom:5px;
 color:#d4af37;
 }
 
-.reserva-container input{
+.form-container input{
 width:100%;
 padding:10px;
 background:#000;
@@ -187,7 +206,7 @@ border:1px solid #555;
 color:white;
 }
 
-.reserva-container button{
+.form-container button{
 margin-top:25px;
 width:100%;
 padding:12px;
