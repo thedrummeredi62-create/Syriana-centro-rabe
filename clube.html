@@ -3,39 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clube Syriana – Cadastro</title>
+<title>Clube Syriana</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="form-body">
+<body class="clube-body">
 
-<section class="form-container">
+<section class="clube-hero">
+    <div class="hero-overlay">
+        <h1>Clube Syriana</h1>
+        <p class="hero-sub">
+            O Syriana agora é mais que restaurante.
+            É clube.
+        </p>
+        <p class="hero-desc">
+            Ao se cadastrar, você passa a fazer parte da Casa dos Árabes.
+            Receba vantagens exclusivas, benefícios especiais,
+            prioridade em eventos culturais e experiências reservadas.
+            Aqui tradição não é adaptação. É raiz.
+        </p>
+    </div>
+</section>
 
-<h1>Clube Syriana</h1>
-<p>
-Cadastre-se para fazer parte da Casa dos Árabes e
-receber benefícios exclusivos.
-</p>
+<section class="clube-form-section">
 
-<form onsubmit="enviarClube(event)">
+    <div class="form-card">
 
-<label>Nome completo</label>
-<input type="text" id="nome" required>
+        <h2>Cadastro Exclusivo</h2>
 
-<label>Endereço</label>
-<input type="text" id="endereco" required>
+        <form onsubmit="enviarClube(event)">
 
-<label>WhatsApp</label>
-<input type="tel" id="telefone" required>
+            <label>Nome completo</label>
+            <input type="text" id="nome" required>
 
-<label>Data de nascimento</label>
-<input type="date" id="nascimento" required>
+            <label>Endereço</label>
+            <input type="text" id="endereco" required>
 
-<button type="submit">Finalizar Cadastro</button>
+            <label>WhatsApp</label>
+            <input type="tel" id="telefone" required>
 
-</form>
+            <label>Data de nascimento</label>
+            <input type="date" id="nascimento" required>
+
+            <button type="submit">Finalizar Cadastro</button>
+
+        </form>
+
+    </div>
 
 </section>
 
@@ -48,13 +64,13 @@ let endereco = document.getElementById("endereco").value;
 let telefone = document.getElementById("telefone").value;
 let nascimento = document.getElementById("nascimento").value;
 
-let msg = `Olá, gostaria de me cadastrar no Clube Syriana.%0A
+let mensagem = `Olá, gostaria de me cadastrar no Clube Syriana.%0A
 Nome: ${nome}%0A
 Endereço: ${endereco}%0A
 WhatsApp: ${telefone}%0A
-Nascimento: ${nascimento}`;
+Data de nascimento: ${nascimento}`;
 
-window.open(`https://wa.me/5542998340063?text=${msg}`, "_blank");
+window.open(`https://wa.me/5542998340063?text=${mensagem}`, "_blank");
 }
 </script>
 
