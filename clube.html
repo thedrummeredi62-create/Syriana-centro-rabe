@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Clube Syriana</title>
+
 <style>
+
 body{
 font-family: Arial, sans-serif;
 background:#111;
@@ -18,10 +20,10 @@ margin:0;
 .container{
 background:#1c1c1c;
 padding:40px;
-border-radius:10px;
-width:350px;
+border-radius:12px;
+width:360px;
 text-align:center;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
+box-shadow:0 0 25px rgba(0,0,0,0.6);
 }
 
 h1{
@@ -32,24 +34,27 @@ margin-bottom:10px;
 p{
 font-size:14px;
 margin-bottom:20px;
+line-height:1.4;
 }
 
 input{
 width:100%;
-padding:10px;
+padding:12px;
 margin:10px 0;
-border-radius:5px;
+border-radius:6px;
 border:none;
+font-size:14px;
 }
 
 button{
 width:100%;
-padding:12px;
+padding:14px;
 background:#d4af37;
 border:none;
-border-radius:5px;
+border-radius:6px;
 font-weight:bold;
 cursor:pointer;
+font-size:15px;
 }
 
 button:hover{
@@ -59,27 +64,34 @@ background:#b8962f;
 #msg{
 margin-top:15px;
 color:#8aff8a;
+font-size:14px;
 }
+
 </style>
 </head>
 
 <body>
 
 <div class="container">
+
 <h1>Clube Syriana</h1>
 
 <p>
 Entre para o Clube Syriana e receba<br>
-novidades, convites especiais,<br>
-descontos e experiências exclusivas.
+novidades exclusivas, convites especiais,<br>
+descontos e experiências árabes únicas.
 </p>
 
 <form id="clubeForm">
+
 <input type="text" id="nome" placeholder="Seu nome" required>
+
 <input type="tel" id="whatsapp" placeholder="Seu WhatsApp" required>
+
 <input type="date" id="nascimento">
 
 <button type="submit">Entrar no Clube</button>
+
 </form>
 
 <p id="msg"></p>
@@ -88,28 +100,33 @@ descontos e experiências exclusivas.
 
 <script>
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbxq5ke4bdBKIBcrh-ocDh6NoaHDVmH8HmeiuQd79qdjLLICu-GPCQNi8OPxrFLJC5Bg/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbx6Hzct2t53TBKCOASC4B6VownbSr2Rsp-Gdss1-UkI18gdv8L9L3xFSyNjOH7LIgdy/exec";
 
 document.getElementById("clubeForm").addEventListener("submit", function(e){
 
 e.preventDefault();
 
-const data = {
-nome: document.getElementById("nome").value,
-whatsapp: document.getElementById("whatsapp").value,
-nascimento: document.getElementById("nascimento").value
-};
+const formData = new FormData();
+
+formData.append("nome", document.getElementById("nome").value);
+formData.append("whatsapp", document.getElementById("whatsapp").value);
+formData.append("nascimento", document.getElementById("nascimento").value);
 
 fetch(scriptURL,{
 method:"POST",
-body:JSON.stringify(data)
+body:formData
 })
-.then(res=>{
+.then(response => {
+
 document.getElementById("msg").innerText="Cadastro realizado! Bem-vindo ao Clube Syriana.";
+
 document.getElementById("clubeForm").reset();
+
 })
-.catch(err=>{
+.catch(error => {
+
 document.getElementById("msg").innerText="Erro ao enviar. Tente novamente.";
+
 });
 
 });
