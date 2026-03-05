@@ -84,11 +84,11 @@ descontos e experiências árabes únicas.
 
 <form id="clubeForm">
 
-<input type="text" id="nome" placeholder="Seu nome" required>
+<input type="text" name="nome" placeholder="Seu nome" required>
 
-<input type="tel" id="whatsapp" placeholder="Seu WhatsApp" required>
+<input type="tel" name="whatsapp" placeholder="Seu WhatsApp" required>
 
-<input type="date" id="nascimento">
+<input type="date" name="nascimento">
 
 <button type="submit">Entrar no Clube</button>
 
@@ -102,30 +102,31 @@ descontos e experiências árabes únicas.
 
 const scriptURL = "https://script.google.com/macros/s/AKfycbx6Hzct2t53TBKCOASC4B6VownbSr2Rsp-Gdss1-UkI18gdv8L9L3xFSyNjOH7LIgdy/exec";
 
-document.getElementById("clubeForm").addEventListener("submit", function(e){
+const form = document.getElementById("clubeForm");
+
+form.addEventListener("submit", function(e){
 
 e.preventDefault();
 
-const formData = new FormData();
+const formData = new FormData(form);
 
-formData.append("nome", document.getElementById("nome").value);
-formData.append("whatsapp", document.getElementById("whatsapp").value);
-formData.append("nascimento", document.getElementById("nascimento").value);
-
-fetch(scriptURL,{
-method:"POST",
-body:formData
+fetch(scriptURL, {
+method: "POST",
+body: formData
 })
-.then(response => {
+.then(response => response.json())
+.then(data => {
 
-document.getElementById("msg").innerText="Cadastro realizado! Bem-vindo ao Clube Syriana.";
+document.getElementById("msg").innerText =
+"Cadastro realizado! Bem-vindo ao Clube Syriana.";
 
-document.getElementById("clubeForm").reset();
+form.reset();
 
 })
 .catch(error => {
 
-document.getElementById("msg").innerText="Erro ao enviar. Tente novamente.";
+document.getElementById("msg").innerText =
+"Erro ao enviar. Tente novamente.";
 
 });
 
