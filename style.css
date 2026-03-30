@@ -1,217 +1,470 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+/* ===========================
+   SYRIANA CENTRO ÁRABE
+   style.css
+   =========================== */
+
+/* Reset & base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-font-family:'Marcellus', serif;
-background:#000;
-color:#eee;
-padding-top:100px; /* compensa menu fixo */
+html {
+  scroll-behavior: smooth;
 }
 
-/* ================= NAV ================= */
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:#0b0b0b;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-border-bottom:1px solid #8c6b1f;
-z-index:1000;
+body {
+  font-family: Georgia, serif;
+  background: #0a0601;
+  color: #e8dcc8;
+  line-height: 1.6;
 }
 
-.logo-area{
-display:flex;
-align-items:center;
-gap:15px;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-.logo-area img{
-height:50px;
+a {
+  transition: color .2s, border-color .2s, background .2s, opacity .2s;
 }
 
-.logo-area span{
-font-family:'Playfair Display', serif;
-font-weight:800;
-font-size:22px;
-letter-spacing:3px;
-background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b,#8c6b1f);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+/* ===========================
+   HEADER
+   =========================== */
+
+header {
+  background: #0a0601;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c8a54b;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.menu a{
-color:#ccc;
-margin-left:25px;
-text-decoration:none;
-transition:0.3s;
+.logo {
+  color: #c8a54b;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
 }
 
-.menu a:hover{
-color:#d4af37;
+.logo span {
+  font-size: 11px;
+  display: block;
+  letter-spacing: 2px;
+  color: #8a6f2e;
+  font-weight: normal;
+  margin-top: 2px;
 }
 
-.btn-reserva{
-padding:8px 18px;
-border:1px solid #d4af37;
-color:#d4af37;
+nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
 }
 
-/* ================= HERO ================= */
-
-.hero{
-height:100vh;
-background:url('/Syriana-centro-rabe/assets/imagens/banner.jpg') center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
+nav a {
+  color: #c8c0b0;
+  text-decoration: none;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+  border-bottom: 2px solid transparent;
 }
 
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.75);
+nav a:hover {
+  color: #c8a54b;
+  border-bottom-color: #c8a54b;
 }
 
-.hero-content{
-position:relative;
-z-index:2;
+nav a.active {
+  color: #c8a54b;
+  border-bottom-color: #c8a54b;
 }
 
-.hero h1{
-font-family:'Playfair Display', serif;
-font-size:70px;
-background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+/* ===========================
+   HERO
+   =========================== */
+
+.hero {
+  min-height: 72vh;
+  background: linear-gradient(rgba(10,6,1,.6), rgba(10,6,1,.75)),
+              url('assets/images/restaurante.jpg') center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
 }
 
-.hero h2{
-color:#d4af37;
-font-size:38px;
-margin:20px 0;
+.hero-tag {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #c8a54b;
+  font-family: Arial, sans-serif;
+  margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
-.hero p{
-color:#ccc;
+.hero h1 {
+  font-size: 52px;
+  color: #f0e0b8;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  font-weight: normal;
 }
 
-/* ================= SECTIONS ================= */
-
-.section{
-padding:120px 20px;
-text-align:center;
+.hero h1 em {
+  color: #c8a54b;
+  font-style: normal;
 }
 
-.titulo{
-font-family:'Playfair Display', serif;
-font-size:42px;
-margin-bottom:40px;
-background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+.hero p {
+  font-size: 16px;
+  color: #b0a080;
+  max-width: 480px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+  font-family: Arial, sans-serif;
 }
 
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:40px;
+/* ===========================
+   BOTÕES
+   =========================== */
+
+.btn-gold {
+  display: inline-block;
+  padding: 14px 36px;
+  border: 1px solid #c8a54b;
+  color: #c8a54b;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-family: Arial, sans-serif;
 }
 
-.card{
-background:#111;
-border:1px solid #8c6b1f;
-width:300px;
-padding-bottom:20px;
-transition:0.4s;
+.btn-gold:hover {
+  background: #c8a54b;
+  color: #0a0601;
 }
 
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px rgba(212,175,55,0.6);
+/* ===========================
+   SEÇÕES GENÉRICAS
+   =========================== */
+
+.section {
+  padding: 80px 40px;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
+.section-label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #c8a54b;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
-.card h3{
-color:#d4af37;
-margin:15px 0;
+.section h2 {
+  font-size: 34px;
+  color: #f0e0b8;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 48px;
 }
 
-.card p{
-padding:0 15px;
-color:#ccc;
+/* ===========================
+   CARDS DE EXPERIÊNCIAS
+   =========================== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: #c8a54b;
 }
 
-/* ================= CLUBE HOME ================= */
-
-.clube-section{
-background:#0d0d0d;
+.card {
+  background: #0f0a03;
+  overflow: hidden;
 }
 
-.descricao{
-max-width:800px;
-margin:auto;
-line-height:1.8;
-color:#ccc;
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
-.botao-principal{
-display:inline-block;
-margin-top:30px;
-padding:15px 40px;
-background:linear-gradient(90deg,#8c6b1f,#d4af37,#b8860b);
-color:black;
-font-weight:bold;
-text-decoration:none;
-transition:0.3s;
+.card-body {
+  padding: 24px;
 }
 
-.botao-principal:hover{
-transform:scale(1.05);
+.card-day {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #c8a54b;
+  font-family: Arial, sans-serif;
+  margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
-/* ================= FOOTER ================= */
-
-footer{
-padding:40px;
-border-top:1px solid #8c6b1f;
-text-align:center;
-background:#0b0b0b;
-color:#888;
+.card h3 {
+  color: #f0e0b8;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 
-/* ================= RESPONSIVO ================= */
-
-@media(max-width:900px){
-.cards{
-flex-direction:column;
-align-items:center;
-}
+.card p {
+  color: #907860;
+  font-size: 14px;
+  line-height: 1.65;
+  font-family: Arial, sans-serif;
 }
 
-@media(max-width:600px){
-nav{
-padding:15px 20px;
+/* ===========================
+   BARRA DE INFORMAÇÕES
+   =========================== */
+
+.info-bar {
+  background: #0f0a03;
+  border-top: 1px solid #1e1608;
+  border-bottom: 1px solid #1e1608;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
 }
-.hero h1{
-font-size:40px;
+
+.info-item {
+  padding: 20px;
 }
-.hero h2{
-font-size:24px;
+
+.info-item .label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #c8a54b;
+  font-family: Arial, sans-serif;
+  margin-bottom: 8px;
+  text-transform: uppercase;
 }
+
+.info-item .value {
+  font-size: 15px;
+  color: #e8dcc8;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===========================
+   SEÇÃO SOBRE
+   =========================== */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #2a1e08;
+}
+
+.about-text h2 {
+  font-size: 30px;
+  color: #f0e0b8;
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+
+.about-text p {
+  color: #907860;
+  font-size: 15px;
+  line-height: 1.8;
+  font-family: Arial, sans-serif;
+  margin-bottom: 16px;
+}
+
+.about-text .detail {
+  font-size: 12px;
+  color: #c8a54b;
+  letter-spacing: 1px;
+  font-family: Arial, sans-serif;
+  border-left: 2px solid #c8a54b;
+  padding-left: 12px;
+  margin-top: 24px;
+}
+
+/* ===========================
+   BARRA WHATSAPP
+   =========================== */
+
+.wa-bar {
+  background: #0a0601;
+  padding: 60px 40px;
+  text-align: center;
+  border-top: 1px solid #1e1608;
+}
+
+.wa-bar p {
+  color: #907860;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 36px;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+
+.wa-btn:hover {
+  opacity: .88;
+}
+
+.wa-icon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+footer {
+  background: #060401;
+  padding: 48px 40px;
+  text-align: center;
+  border-top: 1px solid #1e1608;
+}
+
+footer .f-logo {
+  color: #c8a54b;
+  font-size: 18px;
+  letter-spacing: 4px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 12px;
+}
+
+footer .f-arabic {
+  color: #3a2a10;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  color: #4a3820;
+  font-family: Arial, sans-serif;
+  line-height: 1.9;
+}
+
+footer a {
+  color: #6a5030;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #c8a54b;
+}
+
+footer .copyright {
+  margin-top: 20px;
+  font-size: 11px;
+  color: #2a1e08;
+}
+
+/* ===========================
+   RESPONSIVO — MOBILE
+   =========================== */
+
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    padding: 14px 20px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav a {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+  }
+
+  .info-bar {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .info-item {
+    border-bottom: 1px solid #1e1608;
+    padding: 16px 10px;
+  }
+
+  .info-item:last-child {
+    border-bottom: none;
+  }
+
+  .wa-bar {
+    padding: 40px 20px;
+  }
+
+  footer {
+    padding: 36px 20px;
+  }
 }
