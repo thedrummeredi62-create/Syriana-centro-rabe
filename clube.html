@@ -12,69 +12,72 @@
 <header class="topo">
     <div class="logo">SYRIANA</div>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="index.html#experiencia">Experiência</a>
+        <a href="index.html">Experiência</a>
+        <a href="clube.html">Clube Syriana</a>
         <a href="reserva.html">Reservas</a>
     </nav>
 </header>
 
-<section class="clube-hero">
-    <h1>Clube Syriana</h1>
-    <p>Entre para o clube e receba vantagens exclusivas, presentes de aniversário e convites especiais.</p>
+<section class="section">
+    <h2>Clube Syriana</h2>
+    <p style="max-width:600px;margin:auto;color:#a89263;font-family:Arial">
+        Cadastre-se e receba presentes de aniversário, convites VIP e novidades exclusivas.
+    </p>
 </section>
 
-<section class="clube-form-section">
+<!-- FORMULÁRIO -->
+<section class="form-area">
 
-    <div class="clube-card">
+<div id="formBox">
 
-        <h2>Cadastre-se gratuitamente</h2>
+<form id="clubForm">
 
-        <form id="formClube">
+    <label>Nome</label>
+    <input type="text" name="nome" required>
 
-            <label>Nome completo</label>
-            <input type="text" name="nome" required>
+    <label>WhatsApp</label>
+    <input type="tel" name="whatsapp" required>
 
-            <label>WhatsApp</label>
-            <input type="tel" name="whatsapp" required>
+    <label>Data de nascimento</label>
+    <input type="date" name="nascimento" required>
 
-            <label>Data de nascimento</label>
-            <input type="date" name="aniversario" required>
+    <button type="submit" class="btn-gold">Entrar para o Clube</button>
 
-            <button type="submit">Quero entrar no Clube</button>
+</form>
 
-        </form>
+</div>
 
-        <p id="msgSucesso" class="sucesso"></p>
-
-    </div>
+<!-- MENSAGEM SUCESSO -->
+<div id="sucesso" style="display:none">
+    <h2>Cadastro realizado com sucesso!</h2>
+    <p>Agora você faz parte do Clube Syriana 🎉</p>
+    <a href="index.html" class="btn-gold">Voltar ao site</a>
+</div>
 
 </section>
 
 <footer>
-    <p>Syriana Centro Árabe • Ponta Grossa</p>
+© Syriana Centro Árabe
 </footer>
 
-
 <script>
-document.getElementById("formClube").addEventListener("submit", function(e){
-  e.preventDefault();
+const form = document.getElementById("clubForm");
 
-  const msg = document.getElementById("msgSucesso");
-  msg.innerHTML = "Enviando...";
+form.addEventListener("submit", function(e){
+    e.preventDefault();
 
-  var formData = new FormData(this);
+    const dados = new FormData(form);
 
-  fetch("https://script.google.com/macros/s/AKfycby0q-m1OMWEQUxfu0rhzyAlxt3dMGb11ueEB_wSipRbNxI4zGWuV_dTlLNJGdh8HlnE/exec", {
-    method: "POST",
-    body: formData
-  })
-  .then(response => {
-      msg.innerHTML = "Cadastro realizado com sucesso! 🎉";
-      document.getElementById("formClube").reset();
-  })
-  .catch(error => {
-      msg.innerHTML = "Erro ao enviar. Tente novamente.";
-  });
+    fetch("https://script.google.com/macros/s/AKfycby0q-m1OMWEQUxfu0rhzyAlxt3dMGb11ueEB_wSipRbNxI4zGWuV_dTlLNJGdh8HlnE/exec", {
+        method: "POST",
+        body: dados
+    })
+    .then(res => res.text())
+    .then(() => {
+        document.getElementById("formBox").style.display = "none";
+        document.getElementById("sucesso").style.display = "block";
+    })
+    .catch(() => alert("Erro ao enviar. Tente novamente."));
 });
 </script>
 
