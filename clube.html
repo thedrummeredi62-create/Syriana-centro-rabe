@@ -2,69 +2,81 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clube Syriana</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<h1>CLUBE SYRIANA</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="reserva.html">Reservas</a>
-</nav>
+<header class="topo">
+    <div class="logo">SYRIANA</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#experiencia">Experiência</a>
+        <a href="reserva.html">Reservas</a>
+    </nav>
 </header>
 
-<section class="hero">
-<h2>Entre para o Clube Exclusivo</h2>
-<p>Clientes VIP recebem vantagens secretas.</p>
+<section class="clube-hero">
+    <h1>Clube Syriana</h1>
+    <p>Entre para o clube e receba vantagens exclusivas, presentes de aniversário e convites especiais.</p>
 </section>
 
-<section class="beneficios">
-<h2>Benefícios</h2>
+<section class="clube-form-section">
 
-<div class="cards">
+    <div class="clube-card">
 
-<div class="card">
-<h3>🎁 Sobremesa no aniversário</h3>
-<p>Comemore com a gente.</p>
-</div>
+        <h2>Cadastre-se gratuitamente</h2>
 
-<div class="card">
-<h3>🔥 Convites VIP</h3>
-<p>Prioridade em eventos árabes.</p>
-</div>
+        <form id="formClube">
 
-<div class="card">
-<h3>💎 Promoções secretas</h3>
-<p>Ofertas enviadas no WhatsApp.</p>
-</div>
+            <label>Nome completo</label>
+            <input type="text" name="nome" required>
 
-</div>
-</section>
+            <label>WhatsApp</label>
+            <input type="tel" name="whatsapp" required>
 
-<section class="form-clube">
-<h2>Entrar no Clube Syriana</h2>
+            <label>Data de nascimento</label>
+            <input type="date" name="aniversario" required>
 
-<form action="https://formsubmit.co/seuemail@gmail.com" method="POST">
+            <button type="submit">Quero entrar no Clube</button>
 
-<input type="text" name="nome" placeholder="Nome completo" required>
+        </form>
 
-<input type="tel" name="whatsapp" placeholder="WhatsApp" required>
+        <p id="msgSucesso" class="sucesso"></p>
 
-<label>Data de nascimento</label>
-<input type="date" name="aniversario" required>
-
-<button type="submit">Quero entrar no Clube</button>
-
-</form>
+    </div>
 
 </section>
 
 <footer>
-<p>© Syriana Centro Árabe</p>
+    <p>Syriana Centro Árabe • Ponta Grossa</p>
 </footer>
+
+
+<script>
+document.getElementById("formClube").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const msg = document.getElementById("msgSucesso");
+  msg.innerHTML = "Enviando...";
+
+  var formData = new FormData(this);
+
+  fetch("https://script.google.com/macros/s/AKfycby0q-m1OMWEQUxfu0rhzyAlxt3dMGb11ueEB_wSipRbNxI4zGWuV_dTlLNJGdh8HlnE/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => {
+      msg.innerHTML = "Cadastro realizado com sucesso! 🎉";
+      document.getElementById("formClube").reset();
+  })
+  .catch(error => {
+      msg.innerHTML = "Erro ao enviar. Tente novamente.";
+  });
+});
+</script>
 
 </body>
 </html>
