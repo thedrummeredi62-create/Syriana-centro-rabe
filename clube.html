@@ -18,47 +18,45 @@
     </nav>
 </header>
 
-<section class="section">
-    <h2>Clube Syriana</h2>
-    <p style="max-width:600px;margin:auto;color:#a89263;font-family:Arial">
-        Cadastre-se e receba presentes de aniversário, convites VIP e novidades exclusivas.
-    </p>
+<section class="club-hero">
+    <h1>Clube Syriana</h1>
+    <p>Benefícios VIP • Presente de aniversário • Convites exclusivos</p>
 </section>
 
-<!-- FORMULÁRIO -->
-<section class="form-area">
+<section class="club-container">
 
-<div id="formBox">
+<div class="club-card" id="formBox">
+
+<h2>Entrar para o Clube</h2>
 
 <form id="clubForm">
 
-    <label>Nome</label>
-    <input type="text" name="nome" required>
+<label>Nome completo</label>
+<input type="text" name="nome" required>
 
-    <label>WhatsApp</label>
-    <input type="tel" name="whatsapp" required>
+<label>WhatsApp</label>
+<input type="tel" name="whatsapp" required>
 
-    <label>Data de nascimento</label>
-    <input type="date" name="nascimento" required>
+<label>Data de nascimento</label>
+<input type="date" name="nascimento" required>
 
-    <button type="submit" class="btn-gold">Entrar para o Clube</button>
+<button type="submit" class="btn-club">Quero fazer parte</button>
 
 </form>
-
 </div>
 
-<!-- MENSAGEM SUCESSO -->
-<div id="sucesso" style="display:none">
-    <h2>Cadastro realizado com sucesso!</h2>
-    <p>Agora você faz parte do Clube Syriana 🎉</p>
-    <a href="index.html" class="btn-gold">Voltar ao site</a>
+<!-- SUCESSO -->
+<div class="club-success" id="sucesso">
+    <div class="success-box">
+        <h2>Bem-vindo ao Clube Syriana 🎉</h2>
+        <p>Seu cadastro foi realizado com sucesso.</p>
+        <a href="index.html" class="btn-club">Voltar ao site</a>
+    </div>
 </div>
 
 </section>
 
-<footer>
-© Syriana Centro Árabe
-</footer>
+<footer>© Syriana Centro Árabe</footer>
 
 <script>
 const form = document.getElementById("clubForm");
@@ -74,10 +72,10 @@ form.addEventListener("submit", function(e){
     })
     .then(res => res.text())
     .then(() => {
-        document.getElementById("formBox").style.display = "none";
-        document.getElementById("sucesso").style.display = "block";
+        document.getElementById("formBox").style.display="none";
+        document.getElementById("sucesso").style.display="flex";
     })
-    .catch(() => alert("Erro ao enviar. Tente novamente."));
+    .catch(() => alert("Erro ao enviar cadastro."));
 });
 </script>
 
