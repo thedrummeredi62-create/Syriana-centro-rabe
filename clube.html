@@ -3,76 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <title>Clube Syriana</title>
-
-<style>
-body{
-font-family:Arial;
-background:#111;
-color:#fff;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-margin:0;
-}
-
-.container{
-background:#1c1c1c;
-padding:40px;
-border-radius:10px;
-width:340px;
-text-align:center;
-}
-
-h1{
-color:#d4af37;
-}
-
-input{
-width:100%;
-padding:12px;
-margin:10px 0;
-border-radius:5px;
-border:none;
-}
-
-button{
-width:100%;
-padding:14px;
-background:#d4af37;
-border:none;
-border-radius:5px;
-font-weight:bold;
-cursor:pointer;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+<header>
+<h1>CLUBE SYRIANA</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="reserva.html">Reservas</a>
+</nav>
+</header>
 
-<h1>Clube Syriana</h1>
+<section class="hero">
+<h2>Entre para o Clube Exclusivo</h2>
+<p>Clientes VIP recebem vantagens secretas.</p>
+</section>
 
-<p>
-Entre no Clube Syriana e receba convites,
-novidades e benefícios exclusivos.
-</p>
+<section class="beneficios">
+<h2>Benefícios</h2>
 
-<form method="post"
-action="https://script.google.com/macros/s/AKfycbzy-D2Uo2NG-llG4-NaFTTIGeV72pp_bVUUtX2LeWNCTT7O7OnVC6rKChj50RB1CB76/exec">
+<div class="cards">
 
-<input name="nome" type="text" placeholder="Seu nome" required>
+<div class="card">
+<h3>🎁 Sobremesa no aniversário</h3>
+<p>Comemore com a gente.</p>
+</div>
 
-<input name="whatsapp" type="tel" placeholder="Seu WhatsApp" required>
+<div class="card">
+<h3>🔥 Convites VIP</h3>
+<p>Prioridade em eventos árabes.</p>
+</div>
 
-<input name="nascimento" type="date">
+<div class="card">
+<h3>💎 Promoções secretas</h3>
+<p>Ofertas enviadas no WhatsApp.</p>
+</div>
 
-<button type="submit">Entrar no Clube</button>
+</div>
+</section>
+
+<section class="form-clube">
+<h2>Entrar no Clube Syriana</h2>
+
+<form action="https://formsubmit.co/seuemail@gmail.com" method="POST">
+
+<input type="text" name="nome" placeholder="Nome completo" required>
+
+<input type="tel" name="whatsapp" placeholder="WhatsApp" required>
+
+<label>Data de nascimento</label>
+<input type="date" name="aniversario" required>
+
+<button type="submit">Quero entrar no Clube</button>
 
 </form>
 
-</div>
+</section>
+
+<footer>
+<p>© Syriana Centro Árabe</p>
+</footer>
 
 </body>
 </html>
