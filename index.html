@@ -3,40 +3,188 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Restaurante árabe em Ponta Grossa. Buffet árabe, rodízio de shawarma e noite árabe toda semana. Gastronomia síria autêntica.">
 <title>Syriana Centro Árabe | Restaurante Árabe em Ponta Grossa</title>
+
+<meta name="description" content="Restaurante árabe em Ponta Grossa. Rodízio de shawarma, buffet árabe e noite árabe todas as semanas. Gastronomia síria autêntica.">
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Georgia,serif;background:#0a0601;color:#e8dcc8}
-header{background:#0a0601;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #c8a54b;position:sticky;top:0;z-index:100}
-.logo{color:#c8a54b;font-size:22px;font-weight:bold;letter-spacing:4px;font-family:Arial,sans-serif}
-.logo span{font-size:11px;display:block;letter-spacing:2px;color:#8a6f2e;font-weight:normal;margin-top:2px}
-nav a{color:#c8c0b0;text-decoration:none;padding:8px 18px;font-size:14px;font-family:Arial,sans-serif;letter-spacing:1px;transition:color .2s;border-bottom:2px solid transparent}
-nav a:hover{color:#c8a54b;border-bottom-color:#c8a54b}
-.hero{min-height:72vh;background:linear-gradient(rgba(10,6,1,.6),rgba(10,6,1,.75)),url('assets/images/restaurante.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 20px}
-.hero-tag{font-size:11px;letter-spacing:3px;color:#c8a54b;font-family:Arial,sans-serif;margin-bottom:16px;text-transform:uppercase}
-.hero h1{font-size:52px;color:#f0e0b8;line-height:1.15;margin-bottom:20px;font-weight:normal}
-.hero h1 em{color:#c8a54b;font-style:normal}
-.hero p{font-size:16px;color:#b0a080;max-width:480px;margin:0 auto 32px;line-height:1.7;font-family:Arial,sans-serif}
-.btn-gold{display:inline-block;padding:14px 36px;border:1px solid #c8a54b;color:#c8a54b;text-decoration:none;font-size:13px;letter-spacing:2px;font-family:Arial,sans-serif;transition:all .2s}
-.btn-gold:hover{background:#c8a54b;color:#0a0601}
-.section{padding:80px 40px;max-width:1100px;margin:auto}
-.section-label{font-size:10px;letter-spacing:3px;color:#c8a54b;font-family:Arial,sans-serif;text-align:center;margin-bottom:10px;text-transform:uppercase}
-.section h2{font-size:34px;color:#f0e0b8;text-align:center;font-weight:normal;margin-bottom:48px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:#c8a54b}
-.card{background:#0f0a03;overflow:hidden}
-.card img{width:100%;height:200px;object-fit:cover;display:block}
-.card-body{padding:24px}
-.card-day{font-size:10px;letter-spacing:2px;color:#c8a54b;font-family:Arial,sans-serif;margin-bottom:8px;text-transform:uppercase}
-.card h3{color:#f0e0b8;font-size:18px;font-weight:normal;margin-bottom:10px}
-.card p{color:#907860;font-size:14px;line-height:1.65;font-family:Arial,sans-serif}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about img{width:100%;height:360px;object-fit:cover;display:block;border:1px solid #2a1e08}
-.about-text h2{font-size:30px;color:#f0e0b8;font-weight:normal;margin-bottom:16px}
-.about-text p{color:#907860;font-size:15px;line-height:1.8;font-family:Arial,sans-serif;margin-bottom:16px}
-.about-text .detail{font-size:12px;color:#c8a54b;letter-spacing:1px;font-family:Arial,sans-serif;border-left:2px solid #c8a54b;padding-left:12px;margin-top:24px}
-.info-bar{background:#0f0a03;border-top:1px solid #1e1608;border-bottom:1px solid #1e1608;padding:40px;display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
-.info-item{padding:20px}
-.info-item .label{font-size:10px;letter-spacing:2px;color:#c8a54b;font-family:Arial,sans-serif;margin-bottom:8px;text-transform:uppercase}
-.info-item .value{font-size:15px;color:#e8dcc8;font-family:Arial,sans-serif;line-height:1.6}
-.wa-bar{background:#0a0601;padding
+
+header{
+background:#0a0601;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #c8a54b;
+position:sticky;top:0;
+}
+
+.logo{
+color:#c8a54b;
+font-size:22px;
+letter-spacing:4px;
+font-family:Arial;
+}
+
+nav a{
+color:#c8c0b0;
+text-decoration:none;
+margin-left:20px;
+font-family:Arial;
+font-size:14px;
+}
+nav a:hover{color:#c8a54b}
+
+.hero{
+min-height:80vh;
+background:linear-gradient(rgba(10,6,1,.7),rgba(10,6,1,.85)),
+url("https://images.unsplash.com/photo-1555992336-cbf8b47c1baf?q=80&w=2070") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:52px;
+color:#f0e0b8;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:600px;
+margin:auto;
+font-family:Arial;
+color:#b0a080;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+.btn{
+padding:14px 32px;
+border:1px solid #c8a54b;
+color:#c8a54b;
+text-decoration:none;
+font-family:Arial;
+letter-spacing:2px;
+}
+.btn:hover{
+background:#c8a54b;
+color:#000;
+}
+
+.section{padding:80px 30px;max-width:1100px;margin:auto}
+.section h2{text-align:center;font-size:34px;color:#f0e0b8;margin-bottom:40px}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.card{
+background:#0f0a03;
+border:1px solid #1e1608;
+padding:25px;
+text-align:center;
+}
+
+.card h3{color:#f0e0b8;margin-bottom:10px}
+.card p{font-family:Arial;color:#907860}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{width:100%;border:1px solid #2a1e08}
+
+.info{
+background:#0f0a03;
+text-align:center;
+padding:50px 20px;
+margin-top:60px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid #1e1608;
+font-family:Arial;
+color:#907860;
+}
+
+@media(max-width:800px){
+.about{grid-template-columns:1fr}
+.hero h1{font-size:36px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">SYRIANA</div>
+<nav>
+<a href="#menu">Experiência</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>Autêntica gastronomia síria em Ponta Grossa</h1>
+<p>Buffet árabe, rodízio de shawarma e noites árabes todas as semanas. Uma experiência cultural completa.</p>
+<a class="btn" href="https://wa.me/5542999999999">Reservar mesa</a>
+</div>
+</section>
+
+<section class="section" id="menu">
+<h2>Nossas Experiências</h2>
+<div class="cards">
+
+<div class="card">
+<h3>Rodízio de Shawarma</h3>
+<p>Toda sexta-feira com dança do ventre e pratos servidos continuamente.</p>
+</div>
+
+<div class="card">
+<h3>Mesa Farta</h3>
+<p>Buffet árabe todos os dias com pratos tradicionais da Síria.</p>
+</div>
+
+<div class="card">
+<h3>Delivery Árabe</h3>
+<p>Shawarma, kibe, esfihas e muito mais no conforto da sua casa.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section about" id="sobre">
+<img src="https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?q=80&w=2070">
+<div>
+<h2>Nossa História</h2>
+<p>Chegamos ao Brasil durante a guerra na Síria em busca de paz e recomeço.</p>
+<p>O Syriana nasceu para compartilhar nossa cultura, tradição e sabores com o Brasil.</p>
+</div>
+</section>
+
+<section class="info" id="contato">
+<h2>Rua Augusto Ribas, 294</h2>
+<p>Quarta a Domingo • 18h às 23h</p>
+<p>WhatsApp: (42) 99999-9999</p>
+</section>
+
+<footer>
+© Syriana Centro Árabe
+</footer>
+
+</body>
+</html>
