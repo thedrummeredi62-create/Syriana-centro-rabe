@@ -12,14 +12,48 @@ body{
     background:#0b0b0b;
     font-family:'Poppins', sans-serif;
     color:#fff;
+    margin:0;
 }
 
+/* HEADER */
+.header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#000;
+    border-bottom:1px solid #c9a227;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    z-index:999;
+}
+
+.logo{
+    color:#c9a227;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.menu a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#c9a227;
+}
+
+/* FORM */
 .reserva-section{
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:80px 20px;
+    padding:120px 20px 80px;
 }
 
 .reserva-box{
@@ -35,7 +69,6 @@ body{
 .reserva-box h1{
     text-align:center;
     color:#c9a227;
-    margin-bottom:10px;
 }
 
 .reserva-box p{
@@ -62,13 +95,6 @@ body{
     border:1px solid #333;
     background:#000;
     color:#fff;
-    font-size:15px;
-}
-
-.form-group input:focus,
-.form-group select:focus{
-    border-color:#c9a227;
-    outline:none;
 }
 
 .btn-reservar{
@@ -102,12 +128,21 @@ body{
 
 <body>
 
-<section class="reserva-section">
+<header class="header">
+    <div class="logo">SYRIANA</div>
+    <nav class="menu">
+        <a href="../index.html">Home</a>
+        <a href="../clube/index.html">Clube Syriana</a>
+        <a href="#">Reservas</a>
+        <a href="https://wa.me/5542998340063" target="_blank">WhatsApp</a>
+    </nav>
+</header>
 
+<section class="reserva-section">
 <div class="reserva-box">
 
 <h1>Reservar Mesa</h1>
-<p>Garanta sua experiência árabe no Syriana</p>
+<p>Garanta sua experiência árabe</p>
 
 <form id="reservaForm">
 
@@ -158,17 +193,15 @@ Reserva enviada com sucesso! Em breve confirmaremos pelo WhatsApp ❤️
 document.getElementById("reservaForm").addEventListener("submit", function(e){
 e.preventDefault();
 
-const scriptURL = "https://script.google.com/macros/s/AKfycby0q-m1OMWEQUxfu0rhzyAlxt3dMGb11ueEB_wSipRbNxI4zGWuV_dTlLNJGdh8HlnE/exec";
-
-fetch(scriptURL,{
+fetch("https://script.google.com/macros/s/AKfycby0q-m1OMWEQUxfu0rhzyAlxt3dMGb11ueEB_wSipRbNxI4zGWuV_dTlLNJGdh8HlnE/exec",{
 method:"POST",
 body:new FormData(this)
 })
-.then(response=>{
+.then(res=>{
 document.getElementById("successMsg").style.display="block";
 document.getElementById("reservaForm").reset();
 })
-.catch(error=>alert("Erro ao enviar reserva"));
+.catch(err=>alert("Erro ao enviar reserva"));
 });
 </script>
 
