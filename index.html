@@ -1,173 +1,142 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Syriana Centro Árabe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#0B0B0B;
-    color:#F5F5F5;
-}
+  <title>Syriana Restaurante Árabe em Ponta Grossa | Rodízio Árabe e Shawarma</title>
 
-/* HEADER */
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-    border-bottom:1px solid #222;
-}
+  <meta name="description" content="Restaurante árabe em Ponta Grossa. Rodízio árabe, shawarma, kibe, homus, falafel e comida síria autêntica. Experiência cultural com dança do ventre.">
 
-.logo{
-    color:#C9A227;
-    font-size:26px;
-    font-weight:bold;
-}
+  <meta name="keywords" content="restaurante árabe ponta grossa, comida árabe ponta grossa, shawarma ponta grossa, rodízio árabe, restaurante sírio">
 
-nav a{
-    color:white;
-    margin-left:25px;
-    text-decoration:none;
-}
+  <link rel="canonical" href="https://www.syriana.com.br/">
 
-/* HERO */
-.hero{
-    text-align:center;
-    padding:100px 20px;
-}
+  <!-- Open Graph -->
+  <meta property="og:title" content="Syriana Restaurante Árabe">
+  <meta property="og:description" content="A verdadeira comida árabe em Ponta Grossa.">
+  <meta property="og:image" content="https://www.syriana.com.br/img/og.jpg">
+  <meta property="og:type" content="website">
 
-.hero h1{
-    font-size:50px;
-    color:#C9A227;
-}
+  <!-- Schema Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Syriana Restaurante Árabe",
+    "image": "https://www.syriana.com.br/img/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Augusto Ribas, 294",
+      "addressLocality": "Ponta Grossa",
+      "addressRegion": "PR",
+      "postalCode": "84010-300",
+      "addressCountry": "BR"
+    },
+    "servesCuisine": "Arabic",
+    "priceRange": "$$",
+    "telephone": "+55-42-99999-9999",
+    "url": "https://www.syriana.com.br"
+  }
+  </script>
 
-.hero p{
-    font-size:20px;
-    margin:20px 0;
-}
-
-.whats{
-    padding:15px 30px;
-    background:#8B0000;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-}
-
-/* EXPERIENCIAS */
-.section-title{
-    text-align:center;
-    margin-top:80px;
-    font-size:34px;
-    color:#C9A227;
-}
-
-.experiences{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap:30px;
-    padding:60px;
-    max-width:1100px;
-    margin:auto;
-}
-
-.card{
-    border:1px solid #C9A227;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-}
-
-.card h3{
-    color:#C9A227;
-}
-
-/* CLUBE */
-.club{
-    text-align:center;
-    padding:80px 20px;
-}
-
-.club a{
-    padding:15px 30px;
-    background:#C9A227;
-    color:black;
-    text-decoration:none;
-    border-radius:5px;
-}
-
-footer{
-    text-align:center;
-    padding:40px;
-    border-top:1px solid #222;
-}
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="logo">SYRIANA</div>
-    <nav>
-        <a href="clube.html">Clube</a>
-        <a href="reserva.html">Reservas</a>
-    </nav>
+<!-- HEADER -->
+<header class="header">
+  <nav class="nav">
+    <img src="img/logo.png" alt="Syriana Restaurante Árabe" class="logo">
+
+    <ul class="menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/cardapio.html">Cardápio</a></li>
+      <li><a href="/rodizio.html">Rodízio Árabe</a></li>
+      <li><a href="/experiencias.html">Experiências</a></li>
+      <li><a href="/contato.html">Contato</a></li>
+    </ul>
+  </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-    <h1>Experiência Árabe Autêntica</h1>
-    <p>Restaurante árabe em Ponta Grossa</p>
-    <a class="whats" href="https://wa.me/5542998340063">Reservar pelo WhatsApp</a>
+  <h1>O Verdadeiro Restaurante Árabe em Ponta Grossa</h1>
+  <p>Sabores da Síria com experiência cultural única</p>
+  <a href="/cardapio.html" class="btn">Ver Cardápio</a>
 </section>
 
-<h2 class="section-title">Experiências Syriana</h2>
+<!-- EXPERIÊNCIAS -->
+<section class="experiencias">
+  <h2>Experiências Syriana</h2>
 
-<section class="experiences">
+  <div class="grid">
 
-<div class="card">
-<h3>Noite Árabe</h3>
-<p>Sexta-feira com dança do ventre.</p>
-</div>
+    <div class="card">
+      <h3>Rodízio Árabe</h3>
+      <p>Uma experiência completa com pratos servidos à mesa.</p>
+    </div>
 
-<div class="card">
-<h3>Rodízio de Shawarma</h3>
-<p>Todos os domingos.</p>
-</div>
+    <div class="card">
+      <h3>Noite com Dança do Ventre</h3>
+      <p>Gastronomia e cultura árabe todas as sextas.</p>
+    </div>
 
-<div class="card">
-<h3>Buffet Árabe</h3>
-<p>Sábados e domingos.</p>
-</div>
+    <div class="card">
+      <h3>Mesa Farta</h3>
+      <p>Mais de 15 pratos por apenas R$59,90.</p>
+    </div>
 
-<div class="card">
-<h3>Mesa Farta</h3>
-<p>Segunda a quinta e sábado.</p>
-</div>
+    <div class="card">
+      <h3>Doceria Árabe</h3>
+      <p>Baklava, knefe, namoura e doces típicos sírios.</p>
+    </div>
 
-<div class="card">
-<h3>Carneiro Árabe</h3>
-<p>Sábados com show ao vivo.</p>
-</div>
-
-<div class="card">
-<h3>Doceria Árabe</h3>
-<p>Baklava, knefe e doces tradicionais.</p>
-</div>
-
+  </div>
 </section>
 
-<section class="club">
-    <h2>Entre para o Clube Syriana</h2>
-    <p>Ofertas secretas e benefícios VIP</p>
-    <a href="clube.html">Quero entrar</a>
+<!-- SOBRE -->
+<section class="sobre">
+  <h2>Nossa História</h2>
+  <p>
+    Somos uma família síria que trouxe a verdadeira culinária árabe para Ponta Grossa.
+    Cada prato carrega tradição, cultura e história.
+  </p>
 </section>
 
-<footer>
-© Syriana Centro Árabe
+<!-- CTA -->
+<section class="cta">
+  <h2>Reserve sua mesa</h2>
+  <a href="https://wa.me/5542999999999" class="btn">Reservar pelo WhatsApp</a>
+</section>
+
+<!-- FOOTER SEO -->
+<footer class="footer">
+  <div class="footer-grid">
+
+    <div>
+      <h3>Syriana Restaurante Árabe</h3>
+      <p>Autêntica culinária síria em Ponta Grossa.</p>
+    </div>
+
+    <div>
+      <h3>Endereço</h3>
+      <p>Rua Augusto Ribas, 294</p>
+      <p>Ponta Grossa - PR</p>
+    </div>
+
+    <div>
+      <h3>Contato</h3>
+      <p>WhatsApp: (42) 99999-9999</p>
+      <p>Instagram: @syriana</p>
+    </div>
+
+  </div>
+
+  <p class="copyright">
+    © 2026 Syriana Restaurante Árabe - Todos os direitos reservados
+  </p>
 </footer>
 
 </body>
