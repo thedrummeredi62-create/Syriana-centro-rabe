@@ -4,78 +4,190 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clube Syriana</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#0B0B0B;
+    color:#F5F5F5;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:90px 20px 60px;
+    background:linear-gradient(#0B0B0B,#111);
+}
+
+.hero h1{
+    font-size:48px;
+    letter-spacing:3px;
+    color:#C9A227;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:20px;
+    opacity:.85;
+}
+
+.btn-ancora{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:#8B0000;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+/* BENEFICIOS */
+.beneficios{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:60px 20px;
+}
+
+.card{
+    border:1px solid #C9A227;
+    padding:25px;
+    width:220px;
+    text-align:center;
+    border-radius:10px;
+}
+
+.card h3{
+    color:#C9A227;
+}
+
+/* FORM */
+.form-section{
+    padding:60px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.form-container{
+    border:1px solid #C9A227;
+    padding:40px;
+    border-radius:10px;
+    width:100%;
+    max-width:420px;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#8B0000;
+    color:white;
+    border:none;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* SUCESSO */
+.success-box{
+    display:none;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.success-box h2{
+    color:#C9A227;
+    font-size:34px;
+}
+
+.voltar{
+    margin-top:25px;
+    display:inline-block;
+    padding:12px 25px;
+    background:#C9A227;
+    color:black;
+    text-decoration:none;
+    border-radius:5px;
+}
+</style>
 </head>
 
 <body>
 
-<header class="topo">
-    <div class="logo">SYRIANA</div>
-    <nav>
-        <a href="index.html">Experiência</a>
-        <a href="clube.html">Clube Syriana</a>
-        <a href="reserva.html">Reservas</a>
-    </nav>
-</header>
-
-<section class="club-hero">
-    <h1>Clube Syriana</h1>
-    <p>Benefícios VIP • Presente de aniversário • Convites exclusivos</p>
+<!-- HERO -->
+<section class="hero">
+    <h1>CLUBE SYRIANA</h1>
+    <p>Benefícios exclusivos para clientes especiais</p>
+    <a href="#formulario" class="btn-ancora">QUERO ENTRAR PARA O CLUBE</a>
 </section>
 
-<section class="club-container">
+<!-- BENEFICIOS -->
+<section class="beneficios">
+    <div class="card">
+        <h3>Ofertas secretas</h3>
+        <p>Promoções que só membros recebem</p>
+    </div>
+    <div class="card">
+        <h3>Eventos VIP</h3>
+        <p>Convites antecipados</p>
+    </div>
+    <div class="card">
+        <h3>Prioridade</h3>
+        <p>Reservas preferenciais</p>
+    </div>
+    <div class="card">
+        <h3>Surpresas</h3>
+        <p>Benefícios no aniversário</p>
+    </div>
+</section>
 
-<div class="club-card" id="formBox">
+<!-- FORM -->
+<section id="formulario" class="form-section">
+    <div id="formContainer" class="form-container">
+        <h2 style="text-align:center;color:#C9A227">Cadastro no Clube</h2>
 
-<h2>Entrar para o Clube</h2>
-
-<form id="clubForm">
-
-<label>Nome completo</label>
-<input type="text" name="nome" required>
-
-<label>WhatsApp</label>
-<input type="tel" name="whatsapp" required>
-
-<label>Data de nascimento</label>
-<input type="date" name="nascimento" required>
-
-<button type="submit" class="btn-club">Quero fazer parte</button>
-
-</form>
-</div>
+        <form id="formClube">
+            <input type="text" name="nome" placeholder="Nome completo" required>
+            <input type="tel" name="whatsapp" placeholder="WhatsApp" required>
+            <input type="date" name="aniversario" required>
+            <input type="email" name="email" placeholder="Email (opcional)">
+            <button type="submit">ENTRAR PARA O CLUBE</button>
+        </form>
+    </div>
+</section>
 
 <!-- SUCESSO -->
-<div class="club-success" id="sucesso">
-    <div class="success-box">
-        <h2>Bem-vindo ao Clube Syriana 🎉</h2>
-        <p>Seu cadastro foi realizado com sucesso.</p>
-        <a href="index.html" class="btn-club">Voltar ao site</a>
-    </div>
-</div>
-
+<section id="sucessoCadastro" class="success-box">
+    <h2>✔ Cadastro realizado com sucesso!</h2>
+    <p>Você agora faz parte do Clube Syriana.</p>
+    <p>Em breve receberá ofertas exclusivas no WhatsApp.</p>
+    <a href="/" class="voltar">Voltar ao site</a>
 </section>
 
-<footer>© Syriana Centro Árabe</footer>
-
 <script>
-const form = document.getElementById("clubForm");
-
-form.addEventListener("submit", function(e){
+document.getElementById("formClube").addEventListener("submit", async function(e){
     e.preventDefault();
 
-    const dados = new FormData(form);
+    const dados = new FormData(this);
 
-    fetch("https://script.google.com/macros/s/AKfycby0q-m1OMWEQUxfu0rhzyAlxt3dMGb11ueEB_wSipRbNxI4zGWuV_dTlLNJGdh8HlnE/exec", {
-        method: "POST",
-        body: dados
-    })
-    .then(res => res.text())
-    .then(() => {
-        document.getElementById("formBox").style.display="none";
-        document.getElementById("sucesso").style.display="flex";
-    })
-    .catch(() => alert("Erro ao enviar cadastro."));
+    await fetch("https://script.google.com/macros/s/AKfycby0q-m1OMWEQUxfu0rhzyAlxt3dMGb11ueEB_wSipRbNxI4zGWuV_dTlLNJGdh8HlnE/exec", {
+        method:"POST",
+        body:dados
+    });
+
+    document.getElementById("formContainer").style.display="none";
+    document.getElementById("sucessoCadastro").style.display="block";
 });
 </script>
 
