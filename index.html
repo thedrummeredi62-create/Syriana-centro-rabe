@@ -3,84 +3,171 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Syriana Centro Árabe | Restaurante Árabe em Ponta Grossa</title>
-<link rel="stylesheet" href="style.css">
+<title>Syriana Centro Árabe</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#0B0B0B;
+    color:#F5F5F5;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    color:#C9A227;
+    font-size:26px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    margin-left:25px;
+    text-decoration:none;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:50px;
+    color:#C9A227;
+}
+
+.hero p{
+    font-size:20px;
+    margin:20px 0;
+}
+
+.whats{
+    padding:15px 30px;
+    background:#8B0000;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+/* EXPERIENCIAS */
+.section-title{
+    text-align:center;
+    margin-top:80px;
+    font-size:34px;
+    color:#C9A227;
+}
+
+.experiences{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:30px;
+    padding:60px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+    border:1px solid #C9A227;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.card h3{
+    color:#C9A227;
+}
+
+/* CLUBE */
+.club{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.club a{
+    padding:15px 30px;
+    background:#C9A227;
+    color:black;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid #222;
+}
+</style>
 </head>
 
 <body>
 
-<header class="topo">
+<header>
     <div class="logo">SYRIANA</div>
     <nav>
-        <a href="#experiencia">Experiência</a>
-        <a href="clube.html">Clube Syriana</a>
+        <a href="clube.html">Clube</a>
         <a href="reserva.html">Reservas</a>
-        <a href="#contato">Contato</a>
     </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-    <h1>Autêntica gastronomia síria em Ponta Grossa</h1>
-    <p>Gastronomia • Cultura • Eventos • Exclusividade</p>
-    <a href="reserva.html" class="btn-gold">Reservar mesa</a>
+    <h1>Experiência Árabe Autêntica</h1>
+    <p>Restaurante árabe em Ponta Grossa</p>
+    <a class="whats" href="https://wa.me/5542998340063">Reservar pelo WhatsApp</a>
 </section>
 
-<!-- EXPERIÊNCIA -->
-<section id="experiencia" class="section">
-    <h2>A Experiência Syriana</h2>
+<h2 class="section-title">Experiências Syriana</h2>
 
-    <div class="cards">
+<section class="experiences">
 
-        <div class="card">
-            <h3>Noites Árabes</h3>
-            <p>Todas as sextas-feiras com dança do ventre e atmosfera árabe completa.</p>
-        </div>
+<div class="card">
+<h3>Noite Árabe</h3>
+<p>Sexta-feira com dança do ventre.</p>
+</div>
 
-        <div class="card">
-            <h3>Rodízio de Shawarma</h3>
-            <p>Todos os domingos com sabores ilimitados.</p>
-        </div>
+<div class="card">
+<h3>Rodízio de Shawarma</h3>
+<p>Todos os domingos.</p>
+</div>
 
-        <div class="card">
-            <h3>Buffet Árabe</h3>
-            <p>Sábados e domingos com grande variedade de pratos.</p>
-        </div>
+<div class="card">
+<h3>Buffet Árabe</h3>
+<p>Sábados e domingos.</p>
+</div>
 
-        <div class="card">
-            <h3>Mesa Farta</h3>
-            <p>De segunda a quinta e também aos sábados.</p>
-        </div>
+<div class="card">
+<h3>Mesa Farta</h3>
+<p>Segunda a quinta e sábado.</p>
+</div>
 
-        <div class="card">
-            <h3>Carneiro Árabe</h3>
-            <p>Sábados com show ao vivo especial.</p>
-        </div>
+<div class="card">
+<h3>Carneiro Árabe</h3>
+<p>Sábados com show ao vivo.</p>
+</div>
 
-    </div>
+<div class="card">
+<h3>Doceria Árabe</h3>
+<p>Baklava, knefe e doces tradicionais.</p>
+</div>
+
 </section>
 
-<!-- CLUBE -->
-<section class="clube-home">
+<section class="club">
     <h2>Entre para o Clube Syriana</h2>
-    <p>Ganhe presentes de aniversário, convites VIP e vantagens exclusivas.</p>
-    <a href="clube.html" class="btn-gold">Quero entrar</a>
-</section>
-
-<!-- CONTATO -->
-<section id="contato" class="contato">
-    <h2>Contato</h2>
-    <p>Rua Augusto Ribas, 294 • Ponta Grossa</p>
-
-    <a class="whatsapp-btn"
-       href="https://wa.me/5542998340063"
-       target="_blank">
-       Falar no WhatsApp
-    </a>
+    <p>Ofertas secretas e benefícios VIP</p>
+    <a href="clube.html">Quero entrar</a>
 </section>
 
 <footer>
-    <p>© Syriana Centro Árabe</p>
+© Syriana Centro Árabe
 </footer>
 
 </body>
