@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Programa Embaixadores Syriana em Ponta Grossa.">
+<title>Seja Embaixador Syriana</title>
+<style>
+:root{--preto:#080808;--dourado:#C9A227;--vermelho:#9E0000;--branco:#F7F3EA}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--preto);color:var(--branco)}
+header{position:absolute;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:16px 5%;background:linear-gradient(rgba(0,0,0,.88),transparent)}
+.logo{width:86px;height:86px;object-fit:contain;filter:drop-shadow(0 6px 12px rgba(0,0,0,.55))}
+nav{display:flex;align-items:center;gap:8px}
+nav a{padding:10px 12px;color:white;text-decoration:none;font-weight:bold;border-radius:6px}
+nav a:hover,nav .ativo{color:var(--dourado)}
+nav .reservas{border:1px solid rgba(201,162,39,.8)}
+.hero{min-height:680px;display:flex;align-items:center;justify-content:center;text-align:center;padding:140px 22px 80px;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.93)),url("assets/imagens/banner.jpg") center/cover no-repeat}
+.hero-conteudo{max-width:850px}
+.hero small{color:var(--dourado);text-transform:uppercase;letter-spacing:2px;font-weight:bold}
+.hero h1{margin:14px 0 18px;font-size:clamp(42px,7vw,72px);line-height:1.05}
+.hero h1 span{color:var(--dourado)}
+.hero p{max-width:720px;margin:0 auto 30px;font-size:20px;line-height:1.6;color:rgba(255,255,255,.82)}
+.botao{display:inline-block;padding:16px 26px;background:var(--vermelho);color:white;text-decoration:none;font-weight:bold;border-radius:6px}
+.conteudo{max-width:1120px;margin:auto;padding:85px 22px}
+.titulo{text-align:center;max-width:720px;margin:0 auto 40px}
+.titulo h2{margin:0 0 12px;color:var(--dourado);font-size:clamp(32px,5vw,46px)}
+.titulo p{color:rgba(255,255,255,.7);line-height:1.6}
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:28px;background:#111;border:1px solid rgba(201,162,39,.55);border-radius:12px}
+.numero{display:flex;align-items:center;justify-content:center;width:42px;height:42px;margin-bottom:18px;border-radius:50%;background:var(--vermelho);color:white;font-weight:bold}
+.card h3{margin:0 0 10px;color:var(--dourado)}
+.card p{margin:0;color:rgba(255,255,255,.74);line-height:1.55}
+.beneficios{background:#0d0d0d}
+.lista{max-width:820px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.item{padding:18px 20px;border-left:3px solid var(--dourado);background:#141414;border-radius:6px;color:rgba(255,255,255,.82)}
+.selecao{max-width:900px;margin:80px auto;padding:65px 28px;text-align:center;border:1px solid rgba(201,162,39,.6);border-radius:16px;background:linear-gradient(135deg,#151515,#090909)}
+.selecao h2{margin:0 0 12px;color:var(--dourado);font-size:clamp(32px,5vw,46px)}
+.selecao p{max-width:670px;margin:0 auto 26px;color:rgba(255,255,255,.76);line-height:1.6}
+.selecao strong{color:white}
+footer{text-align:center;padding:35px 20px;border-top:1px solid #222;color:rgba(255,255,255,.58)}
+@media(max-width:800px){header{padding:10px}.logo{width:64px;height:64px}nav{gap:1px}nav a{padding:7px 5px;font-size:12px}.hero{min-height:620px}.grade,.lista{grid-template-columns:1fr}.conteudo{padding:65px 18px}}
+</style>
+</head>
+<body>
+<header>
+    <a href="index.html" aria-label="Página inicial"><img src="assets/imagens/logo.png" alt="Syriana Centro Árabe" class="logo"></a>
+    <nav><a href="index.html">Home</a><a href="clube.html">Clube</a><a href="embaixadores.html" class="ativo">Embaixadores</a><a href="reserva.html" class="reservas">Reservas</a></nav>
+</header>
+<main>
+    <section class="hero">
+        <div class="hero-conteudo">
+            <small>Programa exclusivo em Ponta Grossa</small>
+            <h1>Seja <span>Embaixador Syriana</span></h1>
+            <p>Transforme sua conexão com a cidade e sua presença nas redes em experiências, créditos e campanhas exclusivas com a casa dos árabes.</p>
+            <a class="botao" href="https://wa.me/5542998340063?text=QUERO%20SER%20EMBAIXADOR">Quero ser embaixador</a>
+        </div>
+    </section>
+    <section class="conteudo">
+        <div class="titulo"><h2>Como funciona</h2><p>Não buscamos apenas números de seguidores. Selecionamos pessoas com credibilidade, público local, boa interação e capacidade de apresentar experiências com autenticidade.</p></div>
+        <div class="grade">
+            <article class="card"><span class="numero">1</span><h3>Seleção</h3><p>O Syriana analisa o perfil, o público local, a qualidade do conteúdo e o posicionamento.</p></article>
+            <article class="card"><span class="numero">2</span><h3>Experiência inicial</h3><p>O embaixador conhece a experiência como convidado, em formato previamente combinado.</p></article>
+            <article class="card"><span class="numero">3</span><h3>Conteúdo autêntico</h3><p>O modelo inicial prevê 1 Reel, 3 Stories, localização, marcação do Syriana e código pessoal.</p></article>
+            <article class="card"><span class="numero">4</span><h3>Código exclusivo</h3><p>Cada embaixador recebe um código próprio para identificar as vendas geradas por suas indicações.</p></article>
+            <article class="card"><span class="numero">5</span><h3>Resultados verificados</h3><p>As recompensas são calculadas com base nas vendas realmente identificadas pelo código.</p></article>
+            <article class="card"><span class="numero">6</span><h3>Crescimento</h3><p>Quem entrega resultado pode receber benefícios maiores e participar de novas campanhas.</p></article>
+        </div>
+    </section>
+    <section class="conteudo beneficios">
+        <div class="titulo"><h2>Benefícios do programa</h2><p>Uma parceria profissional, transparente e construída por resultado.</p></div>
+        <div class="lista">
+            <div class="item">Experiência gastronômica inicial como convidado.</div>
+            <div class="item">Créditos Syriana pelas vendas indicadas.</div>
+            <div class="item">Conteúdo divulgado nos canais do restaurante.</div>
+            <div class="item">Participação em campanhas e experiências exclusivas.</div>
+            <div class="item">Código pessoal para acompanhar as indicações.</div>
+            <div class="item">Benefícios maiores para quem se destaca.</div>
+        </div>
+    </section>
+    <section class="selecao">
+        <h2>Quer participar da seleção?</h2>
+        <p>As vagas são limitadas e cada perfil passa por análise. Envie a mensagem <strong>“QUERO SER EMBAIXADOR”</strong> e apresente brevemente seu perfil.</p>
+        <a class="botao" href="https://wa.me/5542998340063?text=QUERO%20SER%20EMBAIXADOR">Enviar candidatura</a>
+    </section>
+</main>
+<footer>© Syriana Centro Árabe — Ponta Grossa, Paraná</footer>
+</body>
+</html>
