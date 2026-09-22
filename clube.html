@@ -55,6 +55,7 @@ body{
 .menu-topo .reservas{
     border:1px solid rgba(201,162,39,.8);
 }
+.whatsapp-fixo{position:fixed;right:20px;bottom:20px;z-index:50;width:58px;height:58px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#25D366;color:white;text-decoration:none;font-size:28px;font-weight:bold;box-shadow:0 8px 22px rgba(0,0,0,.4)}
 
 /* HERO */
 .hero{
@@ -203,6 +204,25 @@ button{
     cursor:pointer;
 }
 
+.grupo-button{
+    display:block;
+    width:100%;
+    padding:15px;
+    background:#8B0000;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+.form-container p{
+    text-align:center;
+    color:rgba(255,255,255,.78);
+    line-height:1.55;
+}
+
 /* SUCESSO */
 .success-box{
     display:none;
@@ -244,6 +264,8 @@ button{
         font-size:12px;
     }
 
+    .menu-topo a:first-child{display:none;}
+
     .hero{
         padding:55px 18px 45px;
     }
@@ -275,6 +297,7 @@ button{
     </a>
     <nav class="menu-topo">
         <a href="index.html">Home</a>
+        <a href="cardapio.html">Cardápio</a>
         <a href="clube.html" class="ativo">Clube</a>
         <a href="embaixadores.html">Embaixadores</a>
         <a href="reserva.html" class="reservas">Reservas</a>
@@ -332,15 +355,9 @@ button{
 <!-- FORM -->
 <section id="formulario" class="form-section">
     <div id="formContainer" class="form-container">
-        <h2 style="text-align:center;color:#C9A227">Cadastro no Clube</h2>
-
-        <form id="formClube">
-            <input type="text" name="nome" placeholder="Nome completo" required>
-            <input type="tel" name="whatsapp" placeholder="WhatsApp" required>
-            <input type="date" name="aniversario" required>
-            <input type="email" name="email" placeholder="Email (opcional)">
-            <button type="submit">ENTRAR PARA O CLUBE</button>
-        </form>
+        <h2 style="text-align:center;color:#C9A227">Entre para o Clube</h2>
+        <p>Participe do grupo oficial e receba ofertas, novidades e convites exclusivos.</p>
+        <a class="grupo-button" href="https://chat.whatsapp.com/FLz9TBfF3SL9EITSAN8RSn">ENTRAR NO GRUPO DO CLUBE</a>
     </div>
 </section>
 
@@ -351,29 +368,7 @@ button{
     <p>Em breve receberá ofertas exclusivas no WhatsApp.</p>
     <a href="/" class="voltar">Voltar ao site</a>
 </section>
-
-<script>
-document.getElementById("formClube").addEventListener("submit", async function(e){
-    e.preventDefault();
-
-    const botao = this.querySelector('button[type="submit"]');
-    const dados = new FormData(this);
-    const grupoWhatsApp = "https://chat.whatsapp.com/FLz9TBfF3SL9EITSAN8RSn";
-
-    botao.disabled = true;
-    botao.textContent = "ENTRANDO NO CLUBE...";
-
-    try {
-        await fetch("https://script.google.com/macros/s/AKfycby0q-m1OMWEQUxfu0rhzyAlxt3dMGb11ueEB_wSipRbNxI4zGWuV_dTlLNJGdh8HlnE/exec", {
-            method: "POST",
-            mode: "no-cors",
-            body: dados
-        });
-    } finally {
-        window.location.href = grupoWhatsApp;
-    }
-});
-</script>
+<a class="whatsapp-fixo" href="https://wa.me/5542998340063" aria-label="Falar pelo WhatsApp">W</a>
 
 </body>
 </html>
