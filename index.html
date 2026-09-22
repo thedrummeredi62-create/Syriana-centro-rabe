@@ -32,6 +32,18 @@ nav .nav-destaque{border:1px solid var(--dourado)}
 .diferencial{min-height:116px;padding:24px;background:rgba(17,17,17,.96);border:1px solid rgba(201,162,39,.6);border-radius:12px;text-align:center;box-shadow:0 14px 35px rgba(0,0,0,.28)}
 .diferencial strong{display:block;color:var(--dourado);font-size:19px;margin-bottom:8px}
 .diferencial span{color:rgba(255,255,255,.74)}
+.hoje{max-width:1180px;margin:85px auto 0;padding:0 24px}
+.hoje-card{position:relative;min-height:390px;overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;border:1px solid rgba(201,162,39,.62);border-radius:18px;background:linear-gradient(135deg,#17130b,#080808);box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.hoje-conteudo{position:relative;z-index:2;padding:54px}
+.hoje-etiqueta{display:inline-flex;align-items:center;gap:8px;margin-bottom:15px;color:var(--dourado);font-size:13px;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
+.hoje-etiqueta::before{content:"";width:9px;height:9px;border-radius:50%;background:#d60000;box-shadow:0 0 0 7px rgba(214,0,0,.14);animation:pulsar 1.8s infinite}
+.hoje h2{margin:0 0 12px;font-size:clamp(34px,5vw,53px);line-height:1.05}
+.hoje p{max-width:560px;margin:0 0 22px;color:rgba(255,255,255,.78);font-size:18px;line-height:1.55}
+.hoje-contador{display:inline-block;margin:0 0 24px;padding:11px 15px;border:1px solid rgba(201,162,39,.45);border-radius:7px;background:rgba(0,0,0,.34);color:var(--dourado);font-weight:bold;font-variant-numeric:tabular-nums}
+.hoje-imagem{width:100%;height:100%;min-height:390px;object-fit:cover;mask-image:linear-gradient(90deg,transparent,#000 24%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 24%)}
+.pedido-fixo{position:fixed;left:20px;bottom:20px;z-index:50;display:flex;align-items:center;gap:9px;padding:15px 20px;border-radius:100px;background:var(--vermelho);color:white;text-decoration:none;font-weight:bold;box-shadow:0 9px 25px rgba(0,0,0,.48);transition:transform .2s ease}
+.pedido-fixo:hover{transform:translateY(-2px)}
+@keyframes pulsar{50%{box-shadow:0 0 0 12px rgba(214,0,0,0)}}
 .experiencias{max-width:1180px;margin:0 auto;padding:110px 24px 80px}
 .titulo-secao{text-align:center;max-width:720px;margin:0 auto 42px}
 .titulo-secao small{color:var(--dourado);text-transform:uppercase;letter-spacing:2px;font-weight:bold}
@@ -63,8 +75,8 @@ nav .nav-destaque{border:1px solid var(--dourado)}
 .club p{margin:0 auto 28px;max-width:650px;color:rgba(255,255,255,.78);font-size:18px;line-height:1.55}
 .club .botao{background:var(--dourado);color:#070707}
 footer{text-align:center;padding:35px 20px;border-top:1px solid #222;color:rgba(255,255,255,.58)}
-@media(max-width:820px){header{padding:12px 10px}.logo-oficial{width:58px;height:58px}nav{gap:0}nav a{padding:7px 5px;font-size:11px}.hero{min-height:680px;padding:135px 24px 100px;background-position:55% center}.hero p{font-size:18px}.diferenciais,.grade-experiencias,.agenda,.avaliacoes,.contato{grid-template-columns:1fr}.diferenciais{margin-top:-35px}.experiencias{padding-top:80px}.experiencia-card{min-height:350px}.agenda{margin:0 18px 65px}.contato{padding-top:65px}}
-@media(max-width:480px){.acoes .botao{width:100%;text-align:center}}
+@media(max-width:820px){header{padding:12px 10px}.logo-oficial{width:58px;height:58px}nav{gap:0}nav a{padding:7px 5px;font-size:11px}.hero{min-height:680px;padding:135px 24px 100px;background-position:55% center}.hero p{font-size:18px}.diferenciais,.grade-experiencias,.agenda,.avaliacoes,.contato{grid-template-columns:1fr}.diferenciais{margin-top:-35px}.hoje{margin-top:65px}.hoje-card{grid-template-columns:1fr}.hoje-conteudo{padding:38px 28px}.hoje-imagem{min-height:260px;max-height:330px;mask-image:linear-gradient(180deg,transparent,#000 20%);-webkit-mask-image:linear-gradient(180deg,transparent,#000 20%)}.experiencias{padding-top:80px}.experiencia-card{min-height:350px}.agenda{margin:0 18px 65px}.contato{padding-top:65px}}
+@media(max-width:480px){body{padding-bottom:74px}.acoes .botao{width:100%;text-align:center}.pedido-fixo{left:12px;right:82px;bottom:12px;justify-content:center;border-radius:9px}.whatsapp-fixo{right:12px;bottom:12px}}
 </style>
 </head>
 <body>
@@ -86,6 +98,18 @@ footer{text-align:center;padding:35px 20px;border-top:1px solid #222;color:rgba(
         <div class="diferencial"><strong>Feito por árabes</strong><span>Uma experiência com identidade e história.</span></div>
         <div class="diferencial"><strong>Mais que gastronomia</strong><span>Cultura, sabores e hospitalidade em um só lugar.</span></div>
     </section>
+    <section class="hoje" id="hoje" aria-labelledby="hoje-titulo">
+        <div class="hoje-card">
+            <div class="hoje-conteudo">
+                <span class="hoje-etiqueta">Hoje no Syriana</span>
+                <h2 id="hoje-titulo">Sabor árabe para hoje</h2>
+                <p id="hoje-descricao">Veja o destaque de hoje e faça seu pedido diretamente pelo nosso cardápio digital.</p>
+                <div id="hoje-contador" class="hoje-contador" aria-live="polite">Carregando programação...</div><br>
+                <a id="hoje-botao" class="botao botao-vermelho" href="https://pedido.anota.ai/loja/restaurante-syriana-1?f=ms" target="_blank" rel="noopener noreferrer">Fazer pedido agora</a>
+            </div>
+            <img id="hoje-imagem" class="hoje-imagem" src="assets/imagens/mesa-v2.webp" alt="Mesa com comida árabe do Syriana">
+        </div>
+    </section>
     <section class="experiencias" id="experiencias">
         <div class="titulo-secao"><small>Conheça a casa</small><h2>Experiências Syriana</h2><p>Cada dia oferece uma forma diferente de viver a cultura e a gastronomia árabe.</p></div>
         <div class="grade-experiencias">
@@ -105,6 +129,35 @@ footer{text-align:center;padding:35px 20px;border-top:1px solid #222;color:rgba(
     <section class="club"><div class="club-conteudo"><h2>Entre para o Clube Syriana</h2><p>Receba ofertas secretas, convites para eventos e benefícios exclusivos para membros.</p><a href="clube.html" class="botao">Quero entrar para o clube</a></div></section>
 </main>
 <footer>© Syriana Centro Árabe — Ponta Grossa, Paraná</footer>
+<a class="pedido-fixo" href="https://pedido.anota.ai/loja/restaurante-syriana-1?f=ms" target="_blank" rel="noopener noreferrer" aria-label="Fazer pedido pelo cardápio digital">🛍 Fazer pedido</a>
 <a class="whatsapp-fixo" href="https://wa.me/5542998340063?text=Ol%C3%A1%2C%20quero%20conhecer%20as%20experi%C3%AAncias%20do%20Syriana" aria-label="Falar com o Syriana pelo WhatsApp">W</a>
+<script>
+(function(){
+    const pedido="https://pedido.anota.ai/loja/restaurante-syriana-1?f=ms";
+    const reserva="https://wa.me/5542998340063?text=Ol%C3%A1%2C%20quero%20reservar%20a%20experi%C3%AAncia%20de%20hoje%20no%20Syriana";
+    const titulo=document.getElementById("hoje-titulo"),descricao=document.getElementById("hoje-descricao"),contador=document.getElementById("hoje-contador"),botao=document.getElementById("hoje-botao"),imagem=document.getElementById("hoje-imagem");
+
+    function agoraPG(){
+        const partes=new Intl.DateTimeFormat("en-CA",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"2-digit",minute:"2-digit",second:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+        const valor=t=>partes.find(p=>p.type===t).value;
+        return {dia:{Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[valor("weekday")],segundos:+valor("hour")*3600+(+valor("minute"))*60+(+valor("second"))};
+    }
+    function relogio(segundos){const h=Math.floor(segundos/3600),m=Math.floor(segundos%3600/60),s=segundos%60;return [h,m,s].map(v=>String(v).padStart(2,"0")).join(":")}
+    function atualizar(){
+        const a=agoraPG(); let inicio=11*3600+30*60,fim=14*3600+30*60,acao=pedido,rotulo="Fazer pedido agora",dados;
+        if(a.dia>=1&&a.dia<=4){dados=["Prato do Dia","De segunda a quinta no almoço, uma opção diferente com sabor árabe e preço para o dia a dia.","assets/imagens/buffet-v2.webp","Prato do Dia do Syriana"]}
+        else if(a.dia===5&&a.segundos<15*3600){dados=["Prato do Dia","Comece a sexta com um almoço árabe preparado para hoje.","assets/imagens/buffet-v2.webp","Prato do Dia do Syriana"]}
+        else if(a.dia===5){inicio=20*3600;fim=23*3600;acao=reserva;rotulo="Reservar a Noite Árabe";dados=["Noite Árabe","Rodízio árabe completo e apresentação cultural de dança do ventre, toda sexta-feira.","assets/imagens/noite-v2.webp","Noite Árabe do Syriana"]}
+        else if(a.dia===6){dados=["Buffet Árabe","Sábado é dia de buffet com variedade, tradição e comida árabe feita por árabes.","assets/imagens/buffet-v2.webp","Buffet Árabe do Syriana"]}
+        else if(a.segundos<16*3600){dados=["Buffet Árabe","Domingo no almoço com buffet árabe livre ou por quilo, das 11h30 às 14h30.","assets/imagens/buffet-v2.webp","Buffet Árabe do Syriana"]}
+        else{inicio=19*3600+30*60;fim=23*3600;acao=reserva;rotulo="Reservar o Rodízio";dados=["Rodízio de Shawarma","Domingo à noite com sabores salgados e doces em uma experiência completa.","assets/imagens/shawarma-v2.webp","Rodízio de Shawarma do Syriana"]}
+        titulo.textContent=dados[0];descricao.textContent=dados[1];imagem.src=dados[2];imagem.alt=dados[3];botao.href=acao;botao.textContent=rotulo;
+        if(a.segundos<inicio)contador.textContent="Começa em "+relogio(inicio-a.segundos);
+        else if(a.segundos<fim)contador.textContent="Aproveite: termina em "+relogio(fim-a.segundos);
+        else{contador.textContent="Confira agora o cardápio digital";botao.href=pedido;botao.textContent="Ver cardápio e pedir"}
+    }
+    atualizar();setInterval(atualizar,1000);
+})();
+</script>
 </body>
 </html>
