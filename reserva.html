@@ -30,9 +30,9 @@ body{
 }
 
 .logo{
-    color:#c9a227;
-    font-size:22px;
-    font-weight:bold;
+    width:72px;
+    height:72px;
+    object-fit:contain;
 }
 
 .menu a{
@@ -123,15 +123,18 @@ body{
     text-align:center;
     font-weight:bold;
 }
+.whatsapp-fixo{position:fixed;right:20px;bottom:20px;z-index:1000;width:58px;height:58px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#25D366;color:white;text-decoration:none;font-size:28px;font-weight:bold;box-shadow:0 8px 22px rgba(0,0,0,.4)}
+@media(max-width:800px){.header{padding:8px}.logo{width:52px;height:52px}.menu a{margin-left:4px;font-size:11px}.menu a:first-child{display:none}.reserva-box{padding:28px 20px}}
 </style>
 </head>
 
 <body>
 
 <header class="header">
-    <div class="logo">SYRIANA</div>
+    <a href="index.html"><img src="assets/imagens/logo.png" alt="Syriana Centro Árabe" class="logo"></a>
     <nav class="menu">
         <a href="index.html">Home</a>
+        <a href="cardapio.html">Cardápio</a>
         <a href="clube.html">Clube Syriana</a>
         <a href="embaixadores.html">Embaixadores</a>
         <a href="reserva.html">Reservas</a>
@@ -189,20 +192,22 @@ Reserva enviada com sucesso! Em breve confirmaremos pelo WhatsApp ❤️
 </form>
 </div>
 </section>
+<a class="whatsapp-fixo" href="https://wa.me/5542998340063" aria-label="Falar pelo WhatsApp">W</a>
 
 <script>
 document.getElementById("reservaForm").addEventListener("submit", function(e){
-e.preventDefault();
-
-fetch("https://script.google.com/macros/s/AKfycby0q-m1OMWEQUxfu0rhzyAlxt3dMGb11ueEB_wSipRbNxI4zGWuV_dTlLNJGdh8HlnE/exec",{
-method:"POST",
-body:new FormData(this)
-})
-.then(res=>{
-document.getElementById("successMsg").style.display="block";
-document.getElementById("reservaForm").reset();
-})
-.catch(err=>alert("Erro ao enviar reserva"));
+    e.preventDefault();
+    const dados = new FormData(this);
+    const mensagem = [
+        "Olá, quero solicitar uma reserva no Syriana.",
+        "",
+        "Nome: " + dados.get("nome"),
+        "WhatsApp: " + dados.get("whatsapp"),
+        "Data: " + dados.get("data"),
+        "Horário: " + dados.get("hora"),
+        "Pessoas: " + dados.get("pessoas")
+    ].join("\n");
+    window.location.href = "https://wa.me/5542998340063?text=" + encodeURIComponent(mensagem);
 });
 </script>
 
