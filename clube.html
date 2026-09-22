@@ -13,6 +13,49 @@ body{
     color:#F5F5F5;
 }
 
+.topo-nav{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index:10;
+    padding:16px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:linear-gradient(rgba(0,0,0,.86),transparent);
+}
+
+.logo-topo{
+    width:86px;
+    height:86px;
+    object-fit:contain;
+    filter:drop-shadow(0 6px 12px rgba(0,0,0,.5));
+}
+
+.menu-topo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.menu-topo a{
+    padding:10px 14px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:6px;
+}
+
+.menu-topo a:hover,
+.menu-topo .ativo{
+    color:#C9A227;
+}
+
+.menu-topo .reservas{
+    border:1px solid rgba(201,162,39,.8);
+}
+
 /* HERO */
 .hero{
     text-align:center;
@@ -20,14 +63,6 @@ body{
     background:
         linear-gradient(rgba(5,5,5,.68),rgba(11,11,11,.94)),
         url("assets/imagens/banner.jpg") center/cover no-repeat;
-}
-
-.hero-logo{
-    width:150px;
-    height:150px;
-    object-fit:contain;
-    margin-bottom:18px;
-    filter:drop-shadow(0 8px 18px rgba(0,0,0,.45));
 }
 
 .hero h1{
@@ -191,13 +226,26 @@ button{
 }
 
 @media (max-width:760px){
-    .hero{
-        padding:55px 18px 45px;
+    .topo-nav{
+        padding:10px 15px;
     }
 
-    .hero-logo{
-        width:120px;
-        height:120px;
+    .logo-topo{
+        width:68px;
+        height:68px;
+    }
+
+    .menu-topo{
+        gap:2px;
+    }
+
+    .menu-topo a{
+        padding:8px 9px;
+        font-size:14px;
+    }
+
+    .hero{
+        padding:55px 18px 45px;
     }
 
     .hero h1{
@@ -221,9 +269,19 @@ button{
 
 <body>
 
+<header class="topo-nav">
+    <a href="index.html" aria-label="Voltar para a página inicial">
+        <img src="assets/imagens/logo.png" alt="Syriana Centro Árabe" class="logo-topo">
+    </a>
+    <nav class="menu-topo">
+        <a href="index.html">Home</a>
+        <a href="clube.html" class="ativo">Clube</a>
+        <a href="reserva.html" class="reservas">Reservas</a>
+    </nav>
+</header>
+
 <!-- HERO -->
 <section class="hero">
-    <img src="assets/imagens/logo.png" alt="Syriana Centro Árabe" class="hero-logo">
     <h1>CLUBE SYRIANA</h1>
     <p>Benefícios exclusivos para clientes especiais</p>
     <a href="#formulario" class="btn-ancora">QUERO ENTRAR PARA O CLUBE</a>
