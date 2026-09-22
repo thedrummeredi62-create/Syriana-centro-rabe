@@ -17,7 +17,17 @@ body{
 .hero{
     text-align:center;
     padding:90px 20px 60px;
-    background:linear-gradient(#0B0B0B,#111);
+    background:
+        linear-gradient(rgba(5,5,5,.68),rgba(11,11,11,.94)),
+        url("assets/imagens/banner.jpg") center/cover no-repeat;
+}
+
+.hero-logo{
+    width:150px;
+    height:150px;
+    object-fit:contain;
+    margin-bottom:18px;
+    filter:drop-shadow(0 8px 18px rgba(0,0,0,.45));
 }
 
 .hero h1{
@@ -62,6 +72,65 @@ body{
 
 .card h3{
     color:#C9A227;
+}
+
+/* EXPERIENCIAS */
+.experiencias{
+    padding:10px 20px 60px;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.experiencias h2{
+    text-align:center;
+    color:#C9A227;
+    font-size:32px;
+    margin:0 0 10px;
+}
+
+.experiencias-intro{
+    text-align:center;
+    opacity:.82;
+    margin:0 auto 28px;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.foto-card{
+    position:relative;
+    height:270px;
+    overflow:hidden;
+    border:1px solid rgba(201,162,39,.65);
+    border-radius:12px;
+    background:#111;
+}
+
+.foto-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .35s ease;
+}
+
+.foto-card:hover img{
+    transform:scale(1.04);
+}
+
+.foto-card span{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:34px 16px 16px;
+    background:linear-gradient(transparent,rgba(0,0,0,.92));
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
 }
 
 /* FORM */
@@ -120,6 +189,33 @@ button{
     text-decoration:none;
     border-radius:5px;
 }
+
+@media (max-width:760px){
+    .hero{
+        padding:55px 18px 45px;
+    }
+
+    .hero-logo{
+        width:120px;
+        height:120px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .galeria{
+        grid-template-columns:1fr;
+    }
+
+    .foto-card{
+        height:230px;
+    }
+
+    .form-container{
+        padding:28px 22px;
+    }
+}
 </style>
 </head>
 
@@ -127,6 +223,7 @@ button{
 
 <!-- HERO -->
 <section class="hero">
+    <img src="assets/imagens/logo.png" alt="Syriana Centro Árabe" class="hero-logo">
     <h1>CLUBE SYRIANA</h1>
     <p>Benefícios exclusivos para clientes especiais</p>
     <a href="#formulario" class="btn-ancora">QUERO ENTRAR PARA O CLUBE</a>
@@ -149,6 +246,27 @@ button{
     <div class="card">
         <h3>Surpresas</h3>
         <p>Benefícios no aniversário</p>
+    </div>
+</section>
+
+<!-- EXPERIENCIAS -->
+<section class="experiencias">
+    <h2>Viva a experiência Syriana</h2>
+    <p class="experiencias-intro">Sabores, cultura e benefícios especiais para quem faz parte do clube.</p>
+
+    <div class="galeria">
+        <div class="foto-card">
+            <img src="assets/imagens/mesa.jpg" alt="Mesa árabe completa do Syriana" loading="lazy">
+            <span>Mesa Farta Árabe</span>
+        </div>
+        <div class="foto-card">
+            <img src="assets/imagens/buffet.jpg" alt="Buffet árabe do Syriana" loading="lazy">
+            <span>Buffet Árabe</span>
+        </div>
+        <div class="foto-card">
+            <img src="assets/imagens/doceria.jpg" alt="Doces árabes artesanais do Syriana" loading="lazy">
+            <span>Doceria &amp; Empório</span>
+        </div>
     </div>
 </section>
 
