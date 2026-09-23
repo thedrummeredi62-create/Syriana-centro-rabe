@@ -206,7 +206,7 @@ footer{text-align:center;padding:35px 20px;border-top:1px solid #222;color:rgba(
             <article class="experiencia-card"><img src="assets/imagens/buffet-v2.webp" alt="Buffet árabe do Syriana" loading="lazy"><div class="card-conteudo"><h3>Buffet Árabe</h3><p>Sábados e domingos com variedade e comida árabe de verdade.</p></div></article>
             <article class="experiencia-card"><img src="assets/imagens/mesa-v2.webp" alt="Mesa Farta com pratos árabes" loading="lazy"><div class="card-conteudo"><h3>Mesa Farta</h3><p>Uma mesa completa para compartilhar sabores clássicos da culinária árabe.</p></div></article>
             <article class="experiencia-card"><img src="assets/imagens/doceria-v2.webp" alt="Doceria e empório árabe do Syriana" loading="lazy"><div class="card-conteudo"><h3>Doceria &amp; Empório</h3><p>Baklava, knefe, doces artesanais e produtos árabes especiais.</p></div></article>
-            <article class="experiencia-card"><img src="assets/imagens/buffet-v2.webp" alt="Prato do dia do Syriana" loading="lazy"><div class="card-conteudo"><h3>Prato do Dia</h3><p>De segunda a sexta no almoço, com sabor árabe e opção diferente a cada dia.</p></div></article>
+            <article class="experiencia-card"><img src="assets/imagens/buffet-v2.webp" alt="Prato do dia do Syriana" loading="lazy"><div class="card-conteudo"><h3>Prato do Dia</h3><p>De segunda a sexta no almoço, com sabor árabe e opção diferente a cada dia.</p><a class="botao botao-vermelho" href="prato-do-dia.html">Reservar antecipadamente</a></div></article>
         </div>
     </section>
     <section class="agenda" aria-label="Agenda semanal">
@@ -288,8 +288,8 @@ footer{text-align:center;padding:35px 20px;border-top:1px solid #222;color:rgba(
     function relogio(segundos){const h=Math.floor(segundos/3600),m=Math.floor(segundos%3600/60),s=segundos%60;return [h,m,s].map(v=>String(v).padStart(2,"0")).join(":")}
     function atualizar(){
         const a=agoraPG(); let inicio=11*3600+30*60,fim=14*3600+30*60,acao=pedido,rotulo="Fazer pedido agora",dados;
-        if(a.dia>=1&&a.dia<=4){dados=["Prato do Dia","De segunda a quinta no almoço, uma opção diferente com sabor árabe e preço para o dia a dia.","assets/imagens/buffet-v2.webp","Prato do Dia do Syriana"]}
-        else if(a.dia===5&&a.segundos<15*3600){dados=["Prato do Dia","Comece a sexta com um almoço árabe preparado para hoje.","assets/imagens/buffet-v2.webp","Prato do Dia do Syriana"]}
+        if(a.dia>=1&&a.dia<=4){inicio=9*3600;fim=13*3600+30*60;acao="prato-do-dia.html";rotulo="Reservar prato do dia";dados=["Prato do Dia","Reserve antecipadamente, escolha seu horário e venha retirar ou comer no restaurante.","assets/imagens/buffet-v2.webp","Prato do Dia do Syriana"]}
+        else if(a.dia===5&&a.segundos<15*3600){inicio=9*3600;fim=13*3600+30*60;acao="prato-do-dia.html";rotulo="Reservar prato do dia";dados=["Prato do Dia","Reserve antecipadamente, escolha seu horário e venha retirar ou comer no restaurante.","assets/imagens/buffet-v2.webp","Prato do Dia do Syriana"]}
         else if(a.dia===5){inicio=20*3600;fim=23*3600;acao=reserva;rotulo="Reservar a Noite Árabe";dados=["Noite Árabe","Rodízio árabe completo e apresentação cultural de dança do ventre, toda sexta-feira.","assets/imagens/noite-v2.webp","Noite Árabe do Syriana"]}
         else if(a.dia===6){dados=["Buffet Árabe","Sábado é dia de buffet com variedade, tradição e comida árabe feita por árabes.","assets/imagens/buffet-v2.webp","Buffet Árabe do Syriana"]}
         else if(a.segundos<16*3600){dados=["Buffet Árabe","Domingo no almoço com buffet árabe livre ou por quilo, das 11h30 às 14h30.","assets/imagens/buffet-v2.webp","Buffet Árabe do Syriana"]}
