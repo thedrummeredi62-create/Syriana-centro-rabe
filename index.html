@@ -315,5 +315,26 @@ footer{text-align:center;padding:35px 20px;border-top:1px solid #222;color:rgba(
     atualizar();setInterval(atualizar,1000);
 })();
 </script>
-<section style="max-width:1150px;margin:0 auto 50px;padding:0 22px;text-align:center"><h2 style="color:#C9A227">Comida árabe em Ponta Grossa</h2><p style="line-height:1.8"><a style="color:#C9A227;margin:0 8px" href="buffet-arabe-ponta-grossa.html">Buffet árabe</a> · <a style="color:#C9A227;margin:0 8px" href="shawarma-ponta-grossa.html">Shawarma</a> · <a style="color:#C9A227;margin:0 8px" href="rodizio-arabe-ponta-grossa.html">Rodízio árabe</a> · <a style="color:#C9A227;margin:0 8px" href="comida-siria-ponta-grossa.html">Comida síria</a></p></section></body>
+<section style="max-width:1150px;margin:0 auto 50px;padding:0 22px;text-align:center"><h2 style="color:#C9A227">Comida árabe em Ponta Grossa</h2><p style="line-height:1.8"><a style="color:#C9A227;margin:0 8px" href="buffet-arabe-ponta-grossa.html">Buffet árabe</a> · <a style="color:#C9A227;margin:0 8px" href="shawarma-ponta-grossa.html">Shawarma</a> · <a style="color:#C9A227;margin:0 8px" href="rodizio-arabe-ponta-grossa.html">Rodízio árabe</a> · <a style="color:#C9A227;margin:0 8px" href="comida-siria-ponta-grossa.html">Comida síria</a></p></section><script>
+(function(){
+  function track(name,params){
+    if(typeof gtag==="function") gtag("event",name,Object.assign({event_category:"conversion"},params||{}));
+  }
+  document.addEventListener("click",function(e){
+    const a=e.target.closest("a");
+    if(!a) return;
+    const href=a.getAttribute("href")||"";
+    const text=(a.textContent||"").trim().replace(/\s+/g," ").slice(0,80);
+    if(href.includes("wa.me/")){
+      track("whatsapp_click",{link_text:text,link_url:href,page_location:location.href});
+    } else if(href.includes("pedido.anota.ai")){
+      track("order_click",{link_text:text,link_url:href,page_location:location.href});
+    } else if(/reserva\.html(?:$|[?#])/.test(href)){
+      track("reservation_click",{link_text:text,link_url:href,page_location:location.href});
+    } else if(/clube\.html(?:$|[?#])/.test(href)){
+      track("club_click",{link_text:text,link_url:href,page_location:location.href});
+    }
+  });
+})();
+</script></body>
 </html>
