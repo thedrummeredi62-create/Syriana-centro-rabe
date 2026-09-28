@@ -6,4 +6,20 @@
   gtag('js', new Date());
   gtag('config', 'G-2X7EL3CFWV');
 </script>
-</head><body><header><a href="/"><img class="logo" src="assets/imagens/logo.png" alt="Syriana Centro Árabe"></a><nav><a href="/">Home</a><a href="cardapio.html">Cardápio</a><a href="blog.html">Receitas</a><a href="reserva.html">Reservas</a></nav></header><main><section class="hero"><h1>Buffet Árabe em Ponta Grossa</h1><p>Aos sábados e domingos, o Syriana serve um almoço com comida árabe autêntica no Centro de Ponta Grossa, com receitas ligadas à cultura de quem prepara a comida.</p></section><section class="content"><h2>Buffet árabe aos sábados e domingos</h2><p>O buffet acontece das <strong>11h30 às 14h30</strong>. Você pode escolher entre <strong>buffet livre por R$74,90</strong> ou <strong>buffet por quilo a R$94,90/kg</strong>.</p><h2>Almoço árabe no Centro de Ponta Grossa</h2><p>O buffet reúne diferentes sabores da culinária síria e árabe e é uma opção para quem procura <strong>almoço árabe em Ponta Grossa</strong> no fim de semana. A proposta do Syriana é manter a experiência focada na comida árabe, com pratos tradicionais da casa.</p><h2>Syriana Centro Árabe</h2><p>Rua Augusto Ribas, 294 — Centro, Ponta Grossa — PR. Além do buffet de sábado e domingo, a casa oferece outras experiências árabes ao longo da semana.</p><div class="links"><a class="btn" href="cardapio.html">Ver cardápio</a><a class="btn outline" href="reserva.html">Reservar mesa</a><a class="btn outline" href="/">Conhecer o Syriana</a></div></section></main><footer>© Syriana Centro Árabe — Ponta Grossa, Paraná</footer></body></html>
+</head><body><header><a href="/"><img class="logo" src="assets/imagens/logo.png" alt="Syriana Centro Árabe"></a><nav><a href="/">Home</a><a href="cardapio.html">Cardápio</a><a href="blog.html">Receitas</a><a href="reserva.html">Reservas</a></nav></header><main><section class="hero"><h1>Buffet Árabe em Ponta Grossa</h1><p>Aos sábados e domingos, o Syriana serve um almoço com comida árabe autêntica no Centro de Ponta Grossa, com receitas ligadas à cultura de quem prepara a comida.</p></section><section class="content"><h2>Buffet árabe aos sábados e domingos</h2><p>O buffet acontece das <strong>11h30 às 14h30</strong>. Você pode escolher entre <strong>buffet livre por R$74,90</strong> ou <strong>buffet por quilo a R$94,90/kg</strong>.</p><h2>Almoço árabe no Centro de Ponta Grossa</h2><p>O buffet reúne diferentes sabores da culinária síria e árabe e é uma opção para quem procura <strong>almoço árabe em Ponta Grossa</strong> no fim de semana. A proposta do Syriana é manter a experiência focada na comida árabe, com pratos tradicionais da casa.</p><h2>Syriana Centro Árabe</h2><p>Rua Augusto Ribas, 294 — Centro, Ponta Grossa — PR. Além do buffet de sábado e domingo, a casa oferece outras experiências árabes ao longo da semana.</p><div class="links"><a class="btn" href="cardapio.html">Ver cardápio</a><a class="btn outline" href="reserva.html">Reservar mesa</a><a class="btn outline" href="/">Conhecer o Syriana</a></div></section></main><footer>© Syriana Centro Árabe — Ponta Grossa, Paraná</footer><script>
+(function(){
+  function track(name,params){
+    if(typeof gtag==="function") gtag("event",name,Object.assign({event_category:"conversion"},params||{}));
+  }
+  document.addEventListener("click",function(e){
+    const a=e.target.closest("a"); if(!a) return;
+    const href=a.getAttribute("href")||"";
+    const text=(a.textContent||"").trim().replace(/\s+/g," ").slice(0,80);
+    const p={link_text:text,link_url:href,page_location:location.href};
+    if(href.includes("wa.me/")) track("whatsapp_click",p);
+    else if(href.includes("pedido.anota.ai")) track("order_click",p);
+    else if(/reserva\.html(?:$|[?#])/.test(href)) track("reservation_click",p);
+    else if(/clube\.html(?:$|[?#])/.test(href)) track("club_click",p);
+  });
+})();
+</script></body></html>
