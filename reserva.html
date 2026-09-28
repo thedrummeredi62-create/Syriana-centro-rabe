@@ -223,7 +223,8 @@ document.getElementById("reservaForm").addEventListener("submit", function(e){
         "Horário: " + dados.get("hora"),
         "Pessoas: " + dados.get("pessoas")
     ].join("\n");
-    window.location.href = "https://wa.me/5542998340063?text=" + encodeURIComponent(mensagem);
+    if(typeof gtag==="function") gtag("event","reservation_submit",{event_category:"conversion",reservation_type:"mesa",people:dados.get("pessoas"),reservation_date:dados.get("data"),reservation_time:dados.get("hora")});
+    setTimeout(function(){ window.location.href = "https://wa.me/5542998340063?text=" + encodeURIComponent(mensagem); },150);
 });
 </script>
 
