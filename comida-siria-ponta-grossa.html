@@ -6,4 +6,20 @@
   gtag('js', new Date());
   gtag('config', 'G-2X7EL3CFWV');
 </script>
-</head><body><header><a href="/"><img class="logo" src="assets/imagens/logo.png" alt="Syriana Centro Árabe"></a><nav><a href="/">Home</a><a href="cardapio.html">Cardápio</a><a href="blog.html">Receitas</a><a href="reserva.html">Reservas</a></nav></header><main><section class="hero"><h1>Restaurante Árabe em Ponta Grossa</h1><p>Comida síria autêntica preparada por árabes no Centro de Ponta Grossa. O Syriana reúne gastronomia, cultura e hospitalidade árabe em uma experiência completa.</p></section><section class="content"><h2>Comida árabe e síria de verdade</h2><p>No Syriana, as receitas fazem parte da cultura de quem prepara a comida. No cardápio você encontra clássicos como <strong>shawarma, quibe cru, homus, babaganoush, kafta, fattoush e arroz com lentilha</strong>, além de outras especialidades da cozinha síria e árabe.</p><p>Para quem procura <strong>comida árabe em Ponta Grossa</strong> ou um <strong>restaurante árabe em Ponta Grossa</strong>, estamos na Rua Augusto Ribas, 294, no Centro.</p><h2>Experiências árabes durante a semana</h2><p>O Syriana oferece diferentes formas de conhecer a culinária da casa: almoço durante a semana, Buffet Árabe aos sábados e domingos, Noite Árabe às sextas e Rodízio de Shawarma aos domingos à noite.</p><h2>Syriana Centro Árabe</h2><p>Mais do que servir pratos árabes, a proposta do Syriana é aproximar Ponta Grossa dos sabores, costumes e hospitalidade da cultura árabe.</p><div class="links"><a class="btn" href="cardapio.html">Ver cardápio</a><a class="btn outline" href="reserva.html">Reservar mesa</a><a class="btn outline" href="/">Conhecer o Syriana</a></div></section></main><footer>© Syriana Centro Árabe — Ponta Grossa, Paraná</footer></body></html>
+</head><body><header><a href="/"><img class="logo" src="assets/imagens/logo.png" alt="Syriana Centro Árabe"></a><nav><a href="/">Home</a><a href="cardapio.html">Cardápio</a><a href="blog.html">Receitas</a><a href="reserva.html">Reservas</a></nav></header><main><section class="hero"><h1>Restaurante Árabe em Ponta Grossa</h1><p>Comida síria autêntica preparada por árabes no Centro de Ponta Grossa. O Syriana reúne gastronomia, cultura e hospitalidade árabe em uma experiência completa.</p></section><section class="content"><h2>Comida árabe e síria de verdade</h2><p>No Syriana, as receitas fazem parte da cultura de quem prepara a comida. No cardápio você encontra clássicos como <strong>shawarma, quibe cru, homus, babaganoush, kafta, fattoush e arroz com lentilha</strong>, além de outras especialidades da cozinha síria e árabe.</p><p>Para quem procura <strong>comida árabe em Ponta Grossa</strong> ou um <strong>restaurante árabe em Ponta Grossa</strong>, estamos na Rua Augusto Ribas, 294, no Centro.</p><h2>Experiências árabes durante a semana</h2><p>O Syriana oferece diferentes formas de conhecer a culinária da casa: almoço durante a semana, Buffet Árabe aos sábados e domingos, Noite Árabe às sextas e Rodízio de Shawarma aos domingos à noite.</p><h2>Syriana Centro Árabe</h2><p>Mais do que servir pratos árabes, a proposta do Syriana é aproximar Ponta Grossa dos sabores, costumes e hospitalidade da cultura árabe.</p><div class="links"><a class="btn" href="cardapio.html">Ver cardápio</a><a class="btn outline" href="reserva.html">Reservar mesa</a><a class="btn outline" href="/">Conhecer o Syriana</a></div></section></main><footer>© Syriana Centro Árabe — Ponta Grossa, Paraná</footer><script>
+(function(){
+  function track(name,params){
+    if(typeof gtag==="function") gtag("event",name,Object.assign({event_category:"conversion"},params||{}));
+  }
+  document.addEventListener("click",function(e){
+    const a=e.target.closest("a"); if(!a) return;
+    const href=a.getAttribute("href")||"";
+    const text=(a.textContent||"").trim().replace(/\s+/g," ").slice(0,80);
+    const p={link_text:text,link_url:href,page_location:location.href};
+    if(href.includes("wa.me/")) track("whatsapp_click",p);
+    else if(href.includes("pedido.anota.ai")) track("order_click",p);
+    else if(/reserva\.html(?:$|[?#])/.test(href)) track("reservation_click",p);
+    else if(/clube\.html(?:$|[?#])/.test(href)) track("club_click",p);
+  });
+})();
+</script></body></html>
